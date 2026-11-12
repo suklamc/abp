@@ -1,0 +1,4 @@
+Feb 10, 2020
+
+Modified to run under Joomla 4
+

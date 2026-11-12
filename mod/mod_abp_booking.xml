@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="install">
+	<name>ABPro popup caller</name>
+	<creationDate>February 2020</creationDate>
+	<author>Soft Ventures, Inc.</author>
+	<copyright>Soft Ventures, Inc. All rights reserved</copyright>
+	<authorEmail>support@softventures.com</authorEmail>
+	<authorUrl>www.softventures.com</authorUrl>
+	<version>3.0 beta 1</version>
+	<description>
+		<![CDATA[
+		<div style="text-align:left"> 
+		<p>Module to call Soft Ventures' Appointment Booking Pro.</p>
+		Requires ABPRo 4.0.5 or above, and Jooma 4.0
+		This module will present a calendar. Clicking on a day will open a popup of the ABPro booking screen.
+		<br/>The Appointment Booking Pro comnponent must be installed, configured and fully operational!
+
+		<p>		
+		<p><u>Version 3.0 (beta 1 February 10/20) </u></p>
+		</p>		
+		beta 1
+		<ul>
+		<li>Modied to run under Joolma 4</li>
+		</ul>
+		<br />		
+
+
+		<br /><span style="color:#FF0000">Note 1:</span> This is not a stand alone booking module, it only provides a calendar to launch an ABPro booking screen.
+		<br /><span style="color:#FF0000">Note 2:</span> The popup uses an iFrame and is therefore not compatible with PayPal as PayPal does not permit a call from an iFrame. 
+		<br />Authorize.net and 2Checkout.com are ok with iFrames.
+		</div>
+		<br>
+		
+		</p>]]>	
+	</description>
+	
+	<files>
+		<filename module="mod_abp_booking">mod_abp_booking.php</filename>
+		<filename module="mod_abp_booking">abpro_popup.css</filename>
+		<filename>tmpl/default.php</filename>
+    	<filename>tmpl/index.html</filename>    
+	</files>
+	<languages>
+		<language tag="en-GB">language/site/en-GB.mod_abp_booking.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="layout" type="list" 
+					label="View" description="Select the view to be used by this menu. (Normal or Accordian)">
+					<option value="0">Normal</option>
+					<option value="1">Accordian</option>
+				</field>
+				<field name="screen_to_display" type="list" label="Booking screen to display" default="booking_screen_gad" description="Which booking screen to show in the popup?"> 
+					<option value="booking_screen_simple">Simple Booking screen</option>
+					<option value="booking_screen_gad">GAD Booking Screen</option>
+					<option value="bookingscreengadwiz">Wizard Booking screen</option>
+				</field>
+				<field name="mode" type="list" default="Normal" label="Display Mode" description="This module can launch in single resoure or single category modes.">
+					<option value="normal">Normal</option>
+					<option value="single_resource">Single Resource</option>
+					<option value="single_category">Single Category</option>
+				</field>
+				<field name="res_cat_id" type="text" label="Resource or Category ID" default="" size="50" description="If calling in Single Resource or Category mode, enter the Resource or Category ID here." /> 
+				<field name="popup_fontsize" type="integer" label="Datepicker Size" default="75" first="50" last="100" step="5" description="Default = 75. The JQuery datepicker uses font size to control the picker size. The number is a percent of the parent element's font size, so 100 = max and smaller numbers make the calendar smaller." /> 
+				<field name="popup_title" type="text" label="Popup Title" default="" size="50" description="This text will be shown as the JQuery dialog title, leave blank for no title." /> 
+				<field name="popup_width" type="text" label="Popup Width" default="750" size="50" description="Width to make the popup. (default = 750)" /> 
+				<field name="popup_height" type="text" label="Popup Height" default="600" size="50" description="Height to make the popup. (default = 600)" /> 
+				<field name="mindate" type="text" label="Min Date" default="1" size="50" description="The JQuery datepicker min date, default = 1, 0=today, 1=tomorrow, etc. Must be a number. Note: in Single Resource mode, the resource settings Disable Dates Before will override this." /> 
+				<field name="maxdate" type="text" label="Max Date" default="" size="50" description="The JQuery datepicker max date, default = empty, 30=30 days from now, 14=14 dyas from now, etc. Must be a number. Note: in Single Resource mode, the resource settings Disable Dates After will override this." /> 
+				<field name="header_text" type="textarea" label="Header" default="" size="255" description="This text appears above the calendar. You can use a language key here and place the text in the language file." /> 
+				<field name="footer_text" type="textarea" label="Footer" default="" size="255" description="This text appears below the calendar. You can use a language key here and place the text in the language file." /> 		
+			</fieldset>
+		</fields>
+		<fields name="params">
+			<fieldset name="options">
+				<field name="spacer" type="spacer" class="text" label="GAD Booking screen Accordion Ordering - Set the data to be displayed in each accordion section." />		
+				<field name="accord_1" type="list" default="accord_res"
+					label="Section 1" description="Select the data to display in this accorion section.">
+					<option value="accord_hide">Hide</option>
+					<option value="accord_res">Category/Resource/Service</option>
+					<option value="accord_basic">Name/Phone/Email</option>
+					<option value="accord_udfs">User Defined Fields (UDFs)</option>
+					<option value="accord_extras">Extras</option>
+					<option value="accord_seats">Seats</option>
+					<option value="accord_grid">Timeslot Grid</option>
+					<option value="accord_submit">Submit</option>
+				</field>
+				<field name="accord_2" type="list" default="accord_basic"
+					label="Section 2" description="Select the data to display in this accorion section.">
+					<option value="accord_hide">Hide</option>
+					<option value="accord_res">Category/Resource/Service</option>
+					<option value="accord_basic">Name/Phone/Email</option>
+					<option value="accord_udfs">User Defined Fields (UDFs)</option>
+					<option value="accord_extras">Extras</option>
+					<option value="accord_seats">Seats</option>
+					<option value="accord_grid">Timeslot Grid</option>
+					<option value="accord_submit">Submit</option>
+				</field>
+				<field name="accord_3" type="list" default="accord_udfs"
+					label="Section 3" description="Select the data to display in this accorion section.">
+					<option value="accord_hide">Hide</option>
+					<option value="accord_res">Category/Resource/Service</option>
+					<option value="accord_basic">Name/Phone/Email</option>
+					<option value="accord_udfs">User Defined Fields (UDFs)</option>
+					<option value="accord_extras">Extras</option>
+					<option value="accord_seats">Seats</option>
+					<option value="accord_grid">Timeslot Grid</option>
+					<option value="accord_submit">Submit</option>
+				</field>
+				<field name="accord_4" type="list" default="accord_extras"
+					label="Section 4" description="Select the data to display in this accorion section.">
+					<option value="accord_hide">Hide</option>
+					<option value="accord_res">Category/Resource/Service</option>
+					<option value="accord_basic">Name/Phone/Email</option>
+					<option value="accord_udfs">User Defined Fields (UDFs)</option>
+					<option value="accord_extras">Extras</option>
+					<option value="accord_seats">Seats</option>
+					<option value="accord_grid">Timeslot Grid</option>
+					<option value="accord_submit">Submit</option>
+				</field>
+				<field name="accord_5" type="list" default="accord_seats"
+					label="Section 5" description="Select the data to display in this accorion section.">
+					<option value="accord_hide">Hide</option>
+					<option value="accord_res">Category/Resource/Service</option>
+					<option value="accord_basic">Name/Phone/Email</option>
+					<option value="accord_udfs">User Defined Fields (UDFs)</option>
+					<option value="accord_extras">Extras</option>
+					<option value="accord_seats">Seats</option>
+					<option value="accord_grid">Timeslot Grid</option>
+					<option value="accord_submit">Submit</option>
+				</field>
+				<field name="accord_6" type="list" default="accord_grid"
+					label="Section 6" description="Select the data to display in this accorion section.">
+					<option value="accord_hide">Hide</option>
+					<option value="accord_res">Category/Resource/Service</option>
+					<option value="accord_basic">Name/Phone/Email</option>
+					<option value="accord_udfs">User Defined Fields (UDFs)</option>
+					<option value="accord_extras">Extras</option>
+					<option value="accord_seats">Seats</option>
+					<option value="accord_grid">Timeslot Grid</option>
+					<option value="accord_submit">Submit</option>
+				</field>
+				<field name="accord_7" type="list" default="accord_submit"
+					label="Section 7" description="Select the data to display in this accorion section.">
+					<option value="accord_hide">Hide</option>
+					<option value="accord_res">Category/Resource/Service</option>
+					<option value="accord_basic">Name/Phone/Email</option>
+					<option value="accord_udfs">User Defined Fields (UDFs)</option>
+					<option value="accord_extras">Extras</option>
+					<option value="accord_seats">Seats</option>
+					<option value="accord_grid">Timeslot Grid</option>
+					<option value="accord_submit">Submit</option>
+				</field>
+				<field name="spacer2" type="spacer" class="text" label="DO NOT set the same data in more than on section." />		
+				<field name="spacer1" type="spacer" hr="true" />
+				<field name="spacerw" type="spacer" class="text" label="Wizard Booking screen Accordion Ordering - Set the data to be displayed in each accordion section." />		
+				<field name="accord_1w" type="list" default="accord_basic"
+					label="Section 1" description="Select the data to display in this accorion section.">
+					<option value="accord_hide">Hide</option>
+					<option value="accord_basic">Name/Phone/Email</option>
+					<option value="accord_udfs">User Defined Fields (UDFs)</option>
+					<option value="accord_extras">Extras</option>
+					<option value="accord_seats">Seats</option>
+				</field>
+				<field name="accord_2w" type="list" default="accord_udfs"
+					label="Section 2" description="Select the data to display in this accorion section.">
+					<option value="accord_hide">Hide</option>
+					<option value="accord_basic">Name/Phone/Email</option>
+					<option value="accord_udfs">User Defined Fields (UDFs)</option>
+					<option value="accord_extras">Extras</option>
+					<option value="accord_seats">Seats</option>
+				</field>
+				<field name="accord_3w" type="list" default="accord_extras"
+					label="Section 3" description="Select the data to display in this accorion section.">
+					<option value="accord_hide">Hide</option>
+					<option value="accord_basic">Name/Phone/Email</option>
+					<option value="accord_udfs">User Defined Fields (UDFs)</option>
+					<option value="accord_extras">Extras</option>
+					<option value="accord_seats">Seats</option>
+				</field>
+				<field name="accord_4w" type="list" default="accord_seats"
+					label="Section 4" description="Select the data to display in this accorion section.">
+					<option value="accord_hide">Hide</option>
+					<option value="accord_basic">Name/Phone/Email</option>
+					<option value="accord_udfs">User Defined Fields (UDFs)</option>
+					<option value="accord_extras">Extras</option>
+					<option value="accord_seats">Seats</option>
+				</field>
+				<field name="spacer2w" type="spacer" class="text" label="DO NOT set the same data in more than on section." />		
+			</fieldset>
+		</fields>
+		
+	</config>
+</extension>
+
