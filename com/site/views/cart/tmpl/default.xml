@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+        <layout title="com_rsappt_pro3_view_cart_title">
+                <message>Internal view only. DO NOT call this from a menu!</message>
+        </layout>
+</metadata>

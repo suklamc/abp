@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<metadata>
+        <layout title="COM_RSAPPT_PRO3_GDPR_VIEW_DEFAULT_TITLE">
+                <message>Display the ABPro GDPR screen</message>
+        </layout>
+			
+<fields name="params">
+<fieldset name="advanced">
+		<field name="gdpr_header_text" type="textarea" default="" label="Header Text" filter="raw"
+			description="Enter header text for the GDPR screen."/>
+		<field name="gdpr_footer_text" type="textarea" default="" label="Footer Text" filter="raw"
+			description="Enter footer text for the GDPR screen"/>
+	</fieldset>
+</fields>		
+
+</metadata>

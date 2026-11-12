@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PayPal</title>
+<link href="../css/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Payment Processors</h1>
+
+<h2>Description</h2>
+<p>ABPro supports two payment processors, PayPal, Authorize.net and 2ChcekOut</p>
+<p>The financial details section of the booking screen is not displayed unless you either enable a payment processor or set the non-Pay Booking button to a mode that shows them. See below.</p>
+
+<p>You can enable any or all processors.</p>
+<p>You equire an account with the respective payment processor to use it.</p>
+<p>&nbsp;</p>
+
+Tabs
+<ul>
+  <li><a href="#general">General Settings</a></li>
+  <li><a href="#PayPal">PayPal</a></li>
+  <li><a href="#authnet">Authorize. net (SIM)</a></li>
+  <li><a href="#authnet2">Authorize. net (AIM)</a></li>
+  <li><a href="#2co">2CheckOut</a></li>
+</ul>
+<p> </p>
+<hr />
+
+<h2>Toolbar Icons</h2>
+
+
+<p><strong>Save:</strong>Save your changes.</p>
+<p><strong>Cancel:</strong> Close screen and return to the control panel</p>
+<p><strong>Help:</strong> Opens this help screen.</p>
+<p>&nbsp;</p>
+<h2>&nbsp;</h2>
+<h2><hr />
+<a name="general" id="general"></a>General Settings tab</h2>
+<p><strong>Additional Fee:</strong> You can optionally add an additional fee to the PayPal/AuthNet transaction. This can be either a fixed fee or percentage for the total. An example may be a processing fee you wish to charge.</p>
+<p><strong>Enable Coupons</strong>: Set to yes if you wish to enable the coupon system and show a coupon entry box on the booking screens.</p>
+<p><strong>Non-Pay Booking Button</strong>: ABPro always shows a submit button when PayPal and AuthNet are disabled. <br />
+  <strong><em>	No</em></strong> = Do not show a non-pay booking button when either PayPal or AuthNet are enabled.(non-pay bookings are not allowed)<br />
+  <strong><em>Yes</em></strong> = Still show a non-pay booking button when PayPal OR AuthNet are enabled. (non-pay bookings are optional)<br />
+  <strong><em>Display Only</em></strong> = Display costs even when PayPal or AuthNet are both disabled. All bookings go through. This would be used if you are collecting payment outside of ABPro but still wish to show the customer booking charges. <br />
+<strong><em>Display &amp; Block</em></strong> = Same as Display Only but blocks booking if amount due &gt; 0.00. This is used with the ABPro User Credit system so that a booking can be made only if the user has enough credit.</p>
+<p><strong>Purge Stale Bookings</strong>: This is used to free timeslots when customer bails out of PayPal/AuthNet without paying. The stale booking will have its status set to `timeout`. Use with caution as this will cause PayPal eChecks to fail as they can take several days to clear.</p>
+<p><a href="#">Top</a></p>
+<p>&nbsp;</p>
+<hr />
+<h2><a name="PayPal" id="PayPal"></a>PayPal tab</h2>
+<p>With PayPal enabled, the booking screen will show the calculated cost at hours x rate, or flat rate depending on how you set it up. </p>
+<p>The other main difference when enabling PayPal, is that a new request will get inserted with a status of 'pending' rather than 'new'. The user is sent to PayPal to make their payment. They are sent back to your site. In a separate thread, PayPal processes the payment and sends an IPN (Instant Payment Notification) message to your site. This IPN is really not 'instant' and your customer may have been returned to your site before the IPN arrives. In this case the in-progress message is shown to the customer. When PayPal completes the payment processing, they send the customer an email and send your site an IPN message. When the customer comes back to your site, the return page checks to see if the transaction has completed. If it has it displays the confirmation message, if not it displays the in-progress message. These messages are set in the 'Messages' tab. </p>
+<p>&nbsp;</p>
+<p>When a booking is made with status 'Pending', the timeslot is locked just as if it were accepted. The display GAD display will show a dashed border so you can see what timeslots are 'Pending'. Normally a slot should only be 'Pending' for a few minute (seconds?) while PayPal is processing the payment. If the user aborts out of PayPal without paying, the slot will stay 'Pending' (and locked) until admin deletes it or it is switched to 'timeout' by the stale bookings setting.</p>
+<p>&nbsp;</p>
+<p><strong>Enable PayPal</strong>: Enable ABPro to use PayPal. Requires a <strong>Premier</strong> (recommended) or <strong>Business</strong> level PayPal account.</p>
+<p><strong>PayPal button image URL:</strong> This is the location used to fetch the PayPal button image. For other images, use PayPal to 'create a buy now button' then cut&amp;paste the button URL.</p>
+<p> <strong>Currency Code:</strong> What currency you wish to charge in. Note the ABPro screen currency symbol is in the language file(s) and changing this value does not affect it.</p>
+<p><strong> PayPal Account:</strong> Enter your PayPal business account, normally your email address.</p>
+<p> <strong>PayPal Sandbox URL:</strong> Use of the PayPal sandbox for testing is recommended but not mandatory. How to use the sandbox is beyond the scope of this help file.</p>
+<p> <strong>PayPal Production URL:</strong> This is the URL to access PayPal, it was made editable as it may change for non-North American PayPal accounts(?).<br />
+</p>
+<p><strong>Use PayPal Sandbox:</strong> If set to 'Yes', the buy-now button will  be send you to the PayPal sandbox URL rather than the production URL. </p>
+<p><strong>Your Logo image</strong>: If you want the PayPal payment screen to display your logo, enter a full url here &lt;br&gt;(ex: http://mysite.com/mylogo.png)</p>
+<p><strong>Item  Name:</strong> You can modify the item name, this is what PayPal shows as the thing being  purchased.</p>
+<p><strong>Optional  Fields (0-3):</strong> You can specify additional information to be show on the PayPal  screen. See User's Guide 'PayPal Optional Fields Example' for example of setup and use.</p>
+<p><strong>Front End Tab:</strong> If set to Yes, the front end Advanced Admin screen will show a tab for viewing payment transaction records.</p>
+<p><a href="#"></a><a href="#">Top</a></p>
+<p>&nbsp;</p>
+<hr /><h2><a name="authnet" id="authnet"></a>Authorize.net (SIM) tab</h2>
+<p>Server Integration Mode (SIM) of Authorize.net.</p>
+<p>With Authorize.net,  a new request will get inserted with a status of 'pending' rather than 'new'. The user is sent to Authorize.net to make their payment. The final receipt shown in Authorize.net is actually a page from this site. That page sets the booking status to accepted and send email confirmations as well. </p>
+<p>The receipt page can be edited to your requirements. The file is:</p>
+<p><strong>/components/com_rsappt_pro3/rsappt_pro3_authnet_receipt.php</strong></p>
+<p>&nbsp;</p>
+<p><strong>Enable Authorize.net</strong>: Enables ABPro to use Authorize.net. Requires an Authorize.net account.</p>
+<p><strong>API Login ID</strong>: Supplied as part of your Authorize.net account.</p>
+<p><strong>Transaction Key</strong>: Supplied as part of your Authorize.net account.</p>
+<p><strong>Button image URL</strong>: This is the URL to the image button that ABPro will display for payments through Authorize.net. You can change the URL to an image of your choice is you do not want the standard Authorize.net button.</p>
+<p><strong>Payment form header text</strong>: You can add static header text that appears at the top of the standard payment screen in Authorize.net. </p>
+<p><strong>Payment form footer text</strong>: You can add static header text that appears at the bottom of the standard payment screen in Authorize.net. </p>
+<p><strong>Front End Tab:</strong> If set to Yes, the front end Advanced Admin screen will show a tab for viewing payment transaction records.</p>
+<p><a href="#"></a><a href="#">Top</a></p>
+<p></p>
+<hr />
+<h2><a name="authnet" id="authnet2"></a>Authorize.net (AIM) tab</h2>
+<p>Advanced Integration Mode (SIM) of Authorize.net.</p>
+<p>With Authorize.net (AIM),  a new request will get inserted with a status of 'pending'. The user enters their credit card information and hits submit. The payment is processed by Authorize.net and the response will be either success or failure. If the payment is successful the confirmation emails are sent, the booking is changes to 'accepted' and the customer is directed to the confirmation screen.</p>
+<p><strong>Enable Authorize.net</strong>: Enables ABPro to use Authorize.net. Requires an Authorize.net account.</p>
+<p><strong>API Login ID</strong>: Supplied as part of your Authorize.net account.</p>
+<p><strong>Transaction Key</strong>: Supplied as part of your Authorize.net account.</p>
+<p><strong>Button image URL</strong>: This is the URL to the image button that ABPro will display for payments through Authorize.net. You can change the URL to an image of your choice is you do not want the standard Authorize.net button.</p>
+<p><strong>Front End Tab:</strong> If set to Yes, the front end Advanced Admin screen will show a tab for viewing payment transaction records.</p>
+<p><a href="#">Top</a></p>
+<p></p>
+<p></p>
+<p></p>
+<hr />
+<h2><a name="2co" id="2co"></a>2CheckOut tab</h2>
+<p>You must have an account with 2CheckOut.com to use this payment processor.</p>
+<p><strong>Enable 2CheckOut</strong>: Enables ABPro to use 2CheckOut.com. Requires an 2CheckOut.com account.</p>
+<p><strong>Demo Mode</strong>: Y = you will be using 2CheckOut in demo mode, no actual payments are collected. This is for test only.</p>
+<p><strong>2CO Account #</strong>: Supplied as part of your 2CheckOut.com account.</p>
+<p><strong>Button image URL</strong>: This is the URL to the image button that ABPro will display for payments through 2CheckOut.com. You can change the URL to an image of your choice is you do not want the standard 2CheckOut.com button.</p>
+<p><strong>Item  Name:</strong> You can modify the item name, this is what 2CheckOut shows as the thing being  purchased.</p>
+<p><strong>Front End Tab:</strong> If set to Yes, the front end Advanced Admin screen will show a tab for viewing payment transaction records.</p>
+<p><a href="#"></a><a href="#">Top</a></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<div align="center" style="margin-top: 30px; margin-bottom: 30px;">
+<a href="#" onclick="javascript:window.close();"><span class="small">Close Window</span></a>
+</div>
+
+</body>
+</html>

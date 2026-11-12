@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Time Slot Setup</title>
+<link href="../css/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Rate Overrides</h1>
+
+<h3>Description</h3>
+<p>Rate Overrides is a <b>optional</b> feature allowing you to define special rates charged based on what Joomla Group a customer is assigned to. These overrides can be applied to resource(s), service(s), extra(s) or seat type(s).</p>
+<p>Initial rate setup is done in the respective entity's setup screen. For example, the resource rate is set in the resource setup screen. </p>
+<p>Rates set here <i>override</i> those rates so you can do things like, offer a <i>different</i> rate for registered users or users assigned to specific Joomla Groups.</p>
+<p>Before setting up an override rate, you should be aware of ABPro's order of preference in different types of rates.</p>
+<p><u>Order of Precedence</u><br />
+  Service rate has precedence over resource rate. If you define both, the service rate is used.<br />
+  Seat price has precedence over both resource and service rates.<br />
+  <br />
+  The Override rates <strong>do not</strong> compromise this order of precedence.<br />
+For example, if you define an override rate for a Resource but you have a Service rate, the Service rate it used.</p>
+<p><br/>
+  
+</p>
+<h3>Toolbar Icons</h3>
+
+
+<p><strong>Cancel:</strong> Abort changes and return to the previous screen.</p>
+<p>
+<strong>Save:</strong> Save changes and return to the previous screen.</p>
+<p><strong>Help:</strong> Opens this help screen.</p>
+<p>&nbsp;</p>
+<h3>Edit Area</h3>
+<p><strong>Type:</strong> <br />
+  [Edit] This shows the type of override being edited.<br />
+  [New] This drop down list allows you to choose the type for a new override.<br />
+</p>
+<p>  <strong>Name:</strong><br />
+  [Edit] This shows the specific entity (resource, service, extra or seat type) for the override.<br />
+  [New] This drop down list populates with the specific entities based on the Type selection. Selecting type of 'Extra' will cause this box to fill with all the 'Extas' so you can pick a specific one to override.</p>
+<p><strong>Group:</strong> This shows what Joomla Group the override applies to. If you setup your resource with a rate of $10, then add a resource type override for group 'registered' as $8, when a logged in user makes a booking, they will receive the $8 rate. If you create multiple overrides for different groups, ABPro will give the customer the lowest rate they are eligible for based on group(s) to which they are assigned. </p>
+<p><strong>Rate:</strong> This is the rate for this override. You cannot change the units of a rate. For example if you resource rate is setup as <i>per hour</i>, the override will be <i>per hour</i> also.</p>
+<p><strong>Published:</strong> Indicates the published state.<br />
+</p>
+<div align="center" style="margin-top: 30px; margin-bottom: 30px;">
+  <a href="#" onclick="javascript:window.close();"><span class="small">Close Window</span></a>
+</div>
+
+</body>
+</html>

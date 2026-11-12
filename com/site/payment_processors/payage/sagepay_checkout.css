@@ -1,0 +1,154 @@
+.svSagePay_Container
+{
+  display: none;
+/*  height: 400px;*/
+  width:500px; 
+  padding:3px; 
+  z-index:3200;
+  background-color:#FFC;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -320px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  border:2px solid #F90;
+}
+
+.svSagePay_Container_mobile
+{
+  display: none;
+  height: 550px;
+  margin:auto;
+  width:80%;
+  z-index:3200;
+  background-color:#FFC;
+  border-radius: 5px;
+  border:2px solid #F90;
+
+  position:relative;
+  top: 2%;
+  left: 2%;
+}
+
+.sv_sp_input{
+	width:80%;
+}
+
+
+#sv_apptpro_view_checkout{
+	background-color:#FFC;
+	padding:10px;
+	margin:10px;
+}
+
+#sv_apptpro_view_checkout_mobile{
+	background-color:#FFC;
+	padding:4px;
+	margin:4px;
+}
+
+#sv_apptpro_view_checkout div{
+	margin-left:5px;
+}
+
+#sv_apptpro_view_checkout label{
+	text-align:left;
+}
+
+.sagepay_state{
+	width:100px;		
+}
+.sagepay_zip{
+	width:100px;		
+}
+.sagepay_country{
+	max-width:150px;
+}
+
+.sagepay_title{
+	font-size:18px;
+	font-weight:bold;
+}
+
+/* the following css is from the Authorize.net sample */
+  
+
+.error {
+	color: red;
+}
+
+table {
+  border-collapse: collapse; }
+
+table td {
+  padding: 0 5px 5px 5px; }
+
+tfoot td {
+  border-top: 3px solid #d23d1a;
+  padding-top: 5px;
+  font-weight: bold; }
+
+fieldset {
+  overflow: auto;
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+fieldset div {
+  float: left; }
+
+fieldset.centered div {
+  text-align: center; }
+
+label {
+  color: #183b55;
+  display: block;
+  margin-bottom: 2px; }
+
+label img {
+  display: block;
+  margin-bottom: 2px; }
+
+input.text {
+  border: 1px solid #bfbab4;
+  margin: 0 4px 8px 0;
+  padding: 6px;
+  color: #1e1e1e;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0px 5px 5px #eee;
+  -moz-box-shadow: inset 0px 5px 5px #eee;
+  box-shadow: inset 0px 5px 5px #eee; }
+
+* html .clearfix {
+  height: 1%;
+  overflow: visible;
+}
+
+* + html .clearfix {
+  min-height: 1%;
+}
+
+.clearfix:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  font-size: 0;
+}
+
+input.error {
+	border: 2px solid red;
+}
+
+
+#theButtons {
+	padding-top:10px;
+}
+#theButtons_mobile {
+	padding-top:5px;
+}

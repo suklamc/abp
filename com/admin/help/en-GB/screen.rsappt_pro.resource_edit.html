@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Resource Edit</title>
+<link href="../css/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Resource Edit</h1>
+
+<h3>Description</h3>
+<p>The 'Resource' is what is being booked or reserved. </p>
+<p>A resource can be anything you want, a room (meeting room, exercise room, etc), a person (doctor, hair stylist, etc) or an object (computer, golf clubs, Ferrari)</p>
+<p>This screen is used to set basic information about the resource such as  name, description and cost. </p>
+<p>Also here is where you can assign users as <strong>resource administrators</strong>. A user that has been assigned as an 
+administrator will, when logged in and viewing the front end booking screen, see an 'Administrator' link. <br />
+<img border="1px" src="../images/fe-admin.jpg" /></p>
+<p>This link will open a 
+  front-end admin screen that will allow them to view and process resource requests. They will only be able to see requests for resources that they are 'Administrator' for.</p>
+<p><img border="1px" src="../images/fe-admin2.jpg" /></p>
+<p>&nbsp;</p>
+<h3>Toolbar Icons</h3>
+<p><strong>Cancel:</strong> Abort changes and return to the previous screen.</p>
+<p>
+<strong>Save:</strong> Save changes and return to the previous screen.</p>
+<p><strong>Help:</strong> Opens this help screen.</p>
+<p>&nbsp;</p>
+<h3>Edit Area</h3>
+<p><strong>Name:</strong> A resource must have a name. ex: 'Meeting Rom A' or 'Dr. Allan Harper.'</p>
+<p><strong>Description:</strong> The description is often just set to the name but can also include more information. This is the field that will be shown in the dropdown list so keep it as short as possible.</p>
+<p><strong>Cost:</strong> Cost is a free form text field so you can put things like `$10/hr + $20  deposit`. This appears in the resource dropdown list for the customer.  </p>
+<p><strong>Rate:</strong> Rate is used by the PayPal implementation. Rate is the amount you  charge as a decimal number. This is used by the system to calculate  total charge for PayPal. </p>
+<ul>
+  <li> per Hour = calculate costs as rate x hours</li>
+  <li> per Booking = flat rate charge per booking</li>
+</ul>
+<p><strong>Email To:</strong> To have notifications for this resource sent to one or more special email addresses,           enter them here. Example: foo@bar.com,abc.xyz.com (use comma to separate multiple addresses) If this field is left blank resource requests will be sent to the address specified in the configuration section. The resource level  overrides the component level. If you set a notification address at the  resource level, the component level is ignored, if you want both you will need  to add both at the resource level.</p>
+<p><strong>SMS Phone:</strong> To have SMS text message notifications sent to this resource enter a  cell phone here (only one supported). This feature requires a  Clickatell account be setup and configured. See the Configure screen  Clickatell tab. If this field is left empty, no SMS messages will be sent to the resource.<br />
+  SMS notifications are sent, to the resource, on these  events :<br />
+- New booking<br />
+- User cancel from front end<br />
+- Booking status change; [status  any status] -&gt; accepted, by admin or front-end admin.<br />
+- Booking status change; [status  any status] -&gt; cancelled, by admin or front-end admin.</p>
+<p><strong>Prevent Duplicate Bookings / Max Duplicated:</strong> <br />
+  Prevent Duplicate Bookings = <strong>No</strong>: means, don't even check,  allow any number of duplicates.<br />
+Prevent Duplicate Bookings = <strong>Yes</strong>: means, check for dupes  and stop any more than Max Duplicates. <br />
+Max Dupe = 0, allow only the first booking<br />
+Max Dupe = 1, allow initial booking + one duplicate (2 bookings total)<br />
+Max Dupe = 2,  allow initial booking + two duplicates (3 bookings total)<br />
+etc.. <br />
+<strong>Global</strong> = use the duplicate booking setting at the control configuration level. </p>
+<p><strong>Default Calendar Category:</strong> Enter a default calendar category for this resource. This is only  applicable if you are using 'auto-accept' and a 3rd party calendar  (JCalPro or JEvents)</p>
+<p><strong>Resource Administrators:</strong> Select one or more users to be administrators for this resource. When a  resource administrator accesses the front-end control they see only  requests for their resources. A user can administer one or many  resources and a resource can have one or many administrators.</p>
+<p><strong>Time Slots:</strong> Global = use 'Global' time slots 
+Resource specific = this resource has it's own time slots defined. Use the Time Slots screen to set time slots.</p>
+<p><strong>Allow Booking on Days:</strong> Un-check any days you wish to be disabled on the popup calendar. </p>
+<p><strong>Non-work day message:</strong> For days not chceked above, you can display an optional message in the  GAD grid for that day. &lt;br&gt;Example:&quot;-- not available --&quot; or &quot;*** My Day Off  ;-) ***&quot;</p>
+<p><strong>Minimum lead time**:</strong> Enter the minimum number of hours a person can book ahead. This was added for sites allowing 'current day' booking.<br />
+  Example: set  to 1 = someone can book an appointment for 1 hour from now, set to 24  and attempts to book appointments less than 24 hours from now will be blocked.<br />
+  <em>Normal setting is '0' with Disable Dates Before set to 'Tomorrow' means a visitor can book anytime tomorrow.</em> </p>
+<p><strong>Disable Dates Before**:</strong> Dates to disable on user's popup calendar.</p>
+<ul>
+  <li>Today = Disable booking of dates earlier than today (allow current day booking) </li>
+  <li>Tomorrow = Disable booking of dates earlier than tomorrow (normal setting) </li>
+  <li>Specific date = disable booking of dates before the selected date</li>
+</ul>
+<p><strong>Disable Dates After**:</strong> Dates to disable on user's popup calendar.</p>
+<ul>
+  <li>Not Set = allow bookings in the future with no limits (normal setting)</li>
+  <li>Specific date = disable dates after  the selected date</li>
+</ul>
+<p>You can use the above two settings when you want to allow bookings on ONLY  certain dates, ex: appointments during a 3 day event. Disable dates  before and after the event so users can only book appointments during  the event.<br /> 
+Leave as 'Tomorrow' and 'Not Set' for day to day appointment  booking on an on-going basis.</p>
+<p><strong>Display Order:</strong> Enter a number to indicate what order this resource should appear in the dropdown list.</p>
+<p><strong>Published:</strong> Only resources with Published set to <strong>Yes</strong> will appear in the dropdown list on the  Booking screen</p>
+<p>&nbsp;</p>
+<p>** These settings do not change the Graphic Availability Display (GAD) booking screen grid but do effect the validation. That means a user may see a timeslot that shows as available but when they try to book it the validation may tell them there is not enough lead time.</p>
+<p><br />
+</p>
+<div align="center" style="margin-top: 30px; margin-bottom: 30px;">
+<a href="#" onclick="javascript:window.close();"><span class="small">Close Window</span></a>
+</div>
+
+</body>
+</html>

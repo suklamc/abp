@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Coupon Edit</title>
+<link href="../css/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Coupon Edit</h1>
+
+<h2>Overview</h2>
+<p>The coupon system allows you to create coupon codes, assign discount levels and expiry dates to them and give them to customers. With the coupon system enabled (done in the Configure/PayPal screen) the booking screen will show a coupon entry box. When the customer enters a code, it is validated and the discount applied to the total cost. </p>
+<p>Coupons are only meaningful when PayPal is enabled.</p>
+<p>&nbsp;</p>
+<p><img src="../images/coup0.jpg" border="1"  /></p>
+<p><img src="../images/coup1.jpg" border="1"  /></p>
+<p>&nbsp;</p>
+<p>To offer a FREE booking set <strong>Value = 100</strong> and the <strong>Type = Percent</strong>.</p>
+<p>If the PayPal total after discount is $0, no trip to PayPal is made and the booking is placed immediately.</p>
+<p>&nbsp;</p>
+<h3>Toolbar Icons</h3>
+
+
+<p><strong>Cancel:</strong> Abort changes and return to the previous screen.</p>
+<p>
+<strong>Save:</strong> Save changes and return to the previous screen.</p>
+<p><strong>Help:</strong> Opens this help screen.</p>
+<p>&nbsp;</p>
+<h3>Edit Area</h3>
+<p><strong>Description:</strong> This text appears on the booking screen when the user enters a coupon code it it is validated by the system. Examples: '10% OFF', 'Summer Special'<br />
+</p>
+<p>  <strong>Coupon Code:</strong> The Coupon Code is what the customer enters to get the discount. This code is stored in the booking so you can tell a customer used a coupon with the order.</p>
+<p>  <strong>Value:</strong> This is the amount that will be discounted. Must be a number.</p>
+<p>  <strong>Type:</strong> This tells what type of discount will be applied, fixed amount or percentage.</p>
+<p><strong>Max User Usage:</strong> This is the maximum times an <strong><em>individual user</em></strong> can use this coupon. Only works if booking requires login. <strong>Set to 0 for no limit.</strong> </p>
+<p><strong>Max Total Usage:</strong> This is the maximum times the coupon be used in total (by all users)<strong>Set to 0 for no limit.</strong> </p>
+<p>If non-0 Max Total must be equal to or greater than Max User.</p>
+<p><strong>Resources: </strong>You can assign this coupon to one or more resources. If NOT assigned, it will be available for ALL. Select one or more resources that this coupon applies to. If you wish  this coupon to be available for ALL resources, do not select any.</p>
+<p><strong>Expiry:</strong> This tell when the coupon will expire. And expired coupon will return 'Coupon Expired' when the user attempts to use it.</p>
+<p>  <strong>Published:</strong> Indicates the published state.<br />
+</p>
+<p></p>
+<div align="center" style="margin-top: 30px; margin-bottom: 30px;">
+<a href="#" onclick="javascript:window.close();"><span class="small">Close Window</span></a>
+</div>
+
+</body>
+</html>

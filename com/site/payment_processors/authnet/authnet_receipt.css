@@ -1,0 +1,7 @@
+body{
+	font:10px/12px Tahoma, sans-serif;
+	}
+
+
+.sv_receipt_table { border:solid 1px #000; border-collapse: collapse; }
+.sv_receipt_table th, .sv_receipt_table td { padding-left: .5em; padding-right:.5em }

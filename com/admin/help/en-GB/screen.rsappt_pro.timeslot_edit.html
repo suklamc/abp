@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Time Slot Edit</title>
+<link href="../css/help.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style1 {font-size: 8pt}
+-->
+</style>
+</head>
+
+<body>
+<h1>Time Slot Edit</h1>
+
+<h3>Description</h3>
+<p>A Time Slot is a block of time in the day that you wish to allow visitors to book an appointment. 
+A day can have as many time slots as you like. </p>
+<p>The Appointment Booking component stores a booking with a start and end date and time. 
+  The time slot just allows you to specify a fixed start/end that is easy for your visitor to choose.</p>
+<p class="style1">Note: Changing a time slot has no effect on previously created bookings.</p>
+<p>&nbsp;</p>
+<h3>Toolbar Icons</h3>
+
+
+<p><strong>Cancel:</strong> Abort changes and return to the previous screen.</p>
+<p>
+<strong>Save:</strong> Save changes and return to the previous screen.</p>
+<p><strong>Help:</strong> Opens this help screen.</p>
+<p>&nbsp;</p>
+<h3>Edit Area</h3>
+<p><strong>Resource:</strong> Select either 'Global' or a specific resource name. Resources with their 'time slots' set to 'Global' will not appear in this list.</p>
+<p><strong>Day:</strong> Choose the day you want this time slot to apply to.</p>
+<p><strong>Start:</strong> Select the <strong>start time</strong> for this time slot.</p>
+<p><strong>End:</strong> Select the <strong>end time</strong> for this time slot. Ensure the end time is after the start time.</p>
+<p><strong>Description</strong>: The description is shown on the timeslot on the GAD booking screen. If left blank, no description is shown, the green checkmark image is displayed. <br />
+  There is not much room so keep it brief.
+      This would <strong>only be used</strong> if you need to provide <strong>special information</strong> about the timeslot, for example 'Morning Session'. </p>
+<p><strong>Published:</strong> Only time slots with Published set to <strong>Yes</strong> will appear in the dropdown list on the Resource Booking screen</p>
+<p><br />
+        Notes: 
+<ul>
+  <li>Changes to time slots will have NO EFFECT on existing bookings.</li>
+  <li> When checking for duplicate bookings, ABPro uses (starttime + 1 second) to (endtime -1 second) so adjacent slots can be set with<strong> common end points</strong><br />
+    Example: 9:00-<strong>9:15</strong> next slot can be <strong>9:15</strong>-9:20.</li>
+  <li>Currently no support for time slots going past midnight.</li>
+</ul>   
+</p>
+
+<div align="center" style="margin-top: 30px; margin-bottom: 30px;">
+<a href="#" onclick="javascript:window.close();"><span class="small">Close Window</span></a>
+</div>
+
+</body>
+</html>

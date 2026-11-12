@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Backup/Restore</title>
+<link href="../css/help.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+<h1>Backup/Restore</h1>
+
+<h3>Description</h3>
+<p>The Backup and Restore functions built into the Appointment Booking  component are primarily intended for use when upgrading from one  version to another. 
+All component data is saved to backup tables in the database. Old backup tables are removed before new ones are created.</p>
+<p>The sequence of actions to upgrade from one version to another is this:<br />
+    <strong>Backup   data -&gt; Uninstall RB component -&gt; Install new   version -&gt; Restore data</strong></p>
+<p>With database tables you can merge old data into new table structures. This cannot be done with the language file because it is a plain text file. If you are doing a backup/restore because you are moving from one ABPro version to the next, the new version will have a new language file with, possibly, new language keys defined. If you choose to backup/restore the language file it will overwrite the new file with your old one. That will keep all you old modifications but it will also remove any new language keys. You will need to manually re-apply these keys.</p>
+<h3>Toolbar Icons</h3>
+
+
+<p><strong>Help:</strong> Opens this help screen.</p>
+<p>&nbsp;</p>
+<h3>Actions</h3>
+<p><strong>Backup Now! :</strong> This will create backup database tables and copy your current settings to them. If the backup tables already exist, they will be overwritten. If a table has no data it will not be copied. This is to prevent accidentally backing up empty tables over your real backup.</p>
+<p><strong>Restore Now! :</strong> This will look to see if there are backup tables and if there are, it will replace the contents of the production tables with the contents of the back tables. If a backup table has no data in it it will not be copied. This is to prevent accidentally restoring up empty tables over your production tables.</p>
+<p><strong>Import from version 1.5.2! :</strong> This will look to see if there are tables from the free version of the Resource Booking component and if there are, it will import the settings from the older version. </p>
+<p>&nbsp;</p>
+<p><strong>Include Language File in Backup :</strong> Make a backup copy of your English language file.</p>
+<p><strong>Include Language File in Restore :</strong> Restore a previously created English language file backup.</p>
+<p><br />
+</p>
+
+<div align="center" style="margin-top: 30px; margin-bottom: 30px;">
+<a href="#" onclick="javascript:window.close();"><span class="small">Close Window</span></a>
+</div>
+
+</body>
+</html>

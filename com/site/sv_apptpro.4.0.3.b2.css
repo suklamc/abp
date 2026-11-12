@@ -1,0 +1,60 @@
+/**********************************************
+New CSS file for Appointment Booking Pro Front End
+***********************************************/
+
+
+#sv_apptpro_fe_adv_admin select, #sv_apptpro_fe_adv_admin input,  #sv_apptpro_fe_adv_admin img{
+   display: inline;
+}
+
+#sv_apptpro_fe_admin select, #sv_apptpro_fe_admin input,  #sv_apptpro_fe_admin img{
+display: inline;
+}
+
+#sv_apptpro_front_desk select, #sv_apptpro_front_desk input,  #sv_apptpro_front_desk img{
+     display: inline;
+}
+
+#sv_apptpro_mybookings select, #sv_apptpro_mybookings input,  #sv_apptpro_mybookings img{
+display: inline;
+}
+
+.ui-datepicker-trigger {
+    display: inline !important;
+}
+		 
+.sv_select ul {
+    list-style-type: none;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #CCC;
+	border-left-color:#CCC;
+	border-bottom-color: #CCC;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	background-attachment: scroll;
+	background-clip: border-box;
+	background-origin: padding-box;
+	background-position-x: 50%;
+	background-position-y: 50%;
+	background-size: auto auto;
+	font-weight: normal;
+}
+
+.sv_select li {
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color:#CCC;
+	background-color:#FFF;
+}
+
+#panel10 .selected {
+	border: 1px solid #888;
+}
+
+.export_save_button {
+  background-color: #f00;
+  color: #FFF;
+}

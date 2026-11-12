@@ -1,0 +1,31 @@
+/****************************
+ override Joomla css
+****************************/
+.sv_select select { 
+	display:list-item !important;
+	width:auto;
+	min-width: 100px;
+} 
+.sv_order_style {
+	width:30px; 
+	text-align: center;
+}
+.sv_date_box {
+	width:80px; 
+	text-align: center;
+}
+
+/* bug in Joomla 3 alpha 2, inserts another dropdown list for each */
+#access_groups_chzn { display:none !important }
+#selected_categories_chzn { display:none !important }
+#admins_chzn { display:none !important }
+#dest_resource_id___chzn { display:none !important }
+#selected_resources_chzn { display:none !important }
+
+
+/* Joomla 4 (beta) admin template does not render limit boxes correcly
+   - this CSS may be able to be removed if they fix the admin tempalte */
+.form-control {
+ background-color:var(--white-offset) !important;
+}
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Time Slot Setup</title>
+<link href="../css/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Rate Adjustments</h1>
+
+<h3>Description</h3>
+The Rate Adjustments and Rate adjustments were added to address two requirements.
+<ul><li>Rate Overrides - I want to charge a different rate for members than for the public.</li>
+<li>Rate Adjustments - I want to charge a different rate based on day of the week or time of day or both.</li>
+</ul>
+<p>Rate Adjustments is an <b>optional</b> feature allowing you to define adjustments to a booking's base rate. The adjustment can be applied based on day of the week, time of day, or day and time.</p>
+<p>Initial rate setup is done in the other setup screens, resource, service or seat type. </p>
+<p>When the booking screen calculates charges, a call is made to get see if an adjustment if required. If an adjustment is found, it is added to the rate to be used for the booking. The adjustment is <strong>Added to</strong> the base rate, so an adjustment of $2.00 on a booking with rate or $10.00 will result ins a new rate of $12.00.</p>
+<p>There are 3 ways to apply adjustments:</p>
+<ol>
+  <li><strong>Day Only</strong>: The adjustment will be applied to all bookings in the selected day of the week, regardless of time.</li>
+  <li><strong>Time Only</strong>: The adjustment will be applied to all bookings in the selected time range, every day of the week.</li>
+  <li><strong>Day and Time</strong>: The adjustment will be applied on the selected day(s) of the week, for bookings in the specified time range.</li>
+</ol>
+<p><strong>Note:</strong> Bookings that begin or end in an adjustment area will have the adjustment applied. <br />
+For example, if an adjustment is set as 4:00-6:00, a booking that runs from 3:00 to 4:30 will have the adjustment applied.</p>
+<p>Negative adjustments allow you to offer day and/or time based discounted booking rates. </p>
+<p>See help text beside individual settings.<br/>
+  
+</p>
+
+</body>
+</html>

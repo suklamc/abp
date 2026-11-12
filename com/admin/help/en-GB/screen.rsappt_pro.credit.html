@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>User Credits</title>
+<link href="../css/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>User Credits</h1>
+
+<h2>Overview</h2>
+<p>The first thing to point out is that User Credit is OPTIONAL - you do not need to implement user credits unless you want to.</p>
+<p>&nbsp;</p>
+<p><strong>What is a User Credit?</strong></p>
+<p>User Credit is a number, representing a currency amount, associated with a registered user. You can sell your customer user credits OUTSIDE of ABPro then enter their number of credits into ABPro. Now when they go to make a booking, the cost of the booking is deducted from their credits.</p>
+<p>&nbsp;</p>
+<p><strong>Why use User Credit?</strong></p>
+<p>A few reasons:</p>
+<ol>
+  <li>If you want to sell your customer the ability to make multiple bookings without paying each time. For example, selling a package of 5 appointments.<br />
+    &nbsp;
+  </li>
+  <li>Quantity discounting. You can sell a package of 10 appointments for less than the cost of 10 individual appointments. This could be done for example by selling $100 of credits for $75.<br />&nbsp;</li>
+  <li>Support additional payment gateways, for example sell credits through Virtumart or an existing gateway, then just add the credits into ABPro.</li>
+</ol>
+<p>&nbsp;</p>
+<p><u>Limitations</u><br />
+</p>
+<ul>
+  <li>ABPro is not a banking system and Soft Ventures will not be liable for any discrepancies. <br />
+  Limited activity logging will be maintained but NOT at an auditing level one would find in financial system software.</li>
+  <li>PayPal must be enabled to turn on the financial parts of the screens.</li>
+  <li>Credits are purchased outside of ABPro (PayPal buy now or Virtumart, etc.) and entered manually by Admin.</li>
+  <li>A resource can have only one rate, that is you cannot offer a different rate for customers paying by PayPal vs paying by credits. Discounting would be handled outside ABPro when credits are purchased (ex: sell $100 worth of credits for $75)</li>
+  <li>No partial cancel, ie: no cancel 1 seat of 3, cancel all and reorder.</li>
+  <li>If a user needs to pay part via PayPal (his credit balance was not enough) and he bails out of PayPal without paying, he would need to contact admin to get his credits restored manually.</li>
+  <li>The credit system only applies to the public booking screens and Front-Desk booking screen. Admin manually setting a booking to 'accepted' will have no effect on the user's credit balance. If admin sets a booking to 'canceled', and the booking was paid all or in part by user credit, the credit is re-instated. If part was paid by PayPal, that will be added to the user's credit balance - no PayPal refunds are ever initiated by ABPro.</li>
+  <li>Not compatible with manual booking acceptance (Auto-Accept = No)</li>
+</ul>
+<br />
+<p>&nbsp;</p>
+<h2>Toolbar Icons</h2>
+
+
+<p><strong>Remove:</strong> Deletes one or more user credit accounts.</p>
+<p><strong>Edit:</strong> Opens the User Credit Edit screen to allow you to view and modify the credit balance and/or view account activity.</p>
+<p><strong>New:</strong> Opens the New User Credit  screen to allow you to add a new user credit account.</p>
+<p><strong>Help:</strong> Opens this help screen.</p>
+<p>&nbsp;</p>
+<h2>List Area</h2>
+<p><strong>ID:</strong> Unique ID for the category.<br />
+  <strong>User ID:</strong> Joomla User ID of the user.<br />
+  <strong>Name:</strong> User's name.<br />
+  <strong>User's Credit Balance:</strong> Shows the current balance for the user.<br />
+</p>
+<p>Click on the <strong>User ID link</strong> to open the edit screen.</p>
+<p>&nbsp;</p>
+<div align="center" style="margin-top: 30px; margin-bottom: 30px;">
+<a href="#" onclick="javascript:window.close();"><span class="small">Close Window</span></a>
+</div>
+
+</body>
+</html>

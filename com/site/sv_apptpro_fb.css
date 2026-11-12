@@ -1,0 +1,1641 @@
+ /* Default Facebook CSS */
+            .body
+            {
+                font-family: "lucida grande" ,tahoma,verdana,arial,sans-serif !important;
+                /*font-size: 11px;*/
+                color: #333333;
+            }
+            /* Default Anchor Style */
+            .body a
+            {
+                color: #3b5998;
+                outline-style: none;
+                text-decoration: none;
+                font-size: 11px;
+                font-weight: bold;
+            }
+            .body a:hover
+            {
+                text-decoration: underline;
+            }
+            /* Facebook Box Styles */
+            .fbgreybox
+            {
+                background-color: #f7f7f7;
+                border: 1px solid #cccccc;
+                color: #333333;
+                padding: 10px;
+                font-size: 13px;
+                font-weight: bold;
+            }
+            .fbbluebox
+            {
+                background-color: #eceff6;
+                border: 1px solid #d4dae8;
+                color: #333333;
+                padding: 10px;
+                font-size: 13px;
+                font-weight: bold;
+            }
+            .fbinfobox
+            {
+                background-color: #fff9d7;
+                border: 1px solid #e2c822;
+                color: #333333;
+                padding: 10px;
+                font-size: 13px;
+                font-weight: bold;
+            }
+            .fberrorbox
+            {
+                background-color: #ffebe8;
+                border: 1px solid #dd3c10;
+                color: #333333;
+                padding: 10px;
+                font-size: 13px;
+                font-weight: bold;
+            }
+            /* Content Divider on White Background */
+            .fbcontentdivider
+            {
+                margin-top: 15px;
+                margin-bottom: 15px;
+                width: 520px;
+                height: 1px;
+                background-color: #d8dfea;
+            }
+            /* Facebook Tab Style */
+            .fbtab
+            {
+                padding: 8px;
+                background-color: #d8dfea;
+                color: #3b5998;
+                font-weight: bold;
+                float: left;
+                margin-right: 4px;
+                text-decoration: none;
+            }
+            .fbtab:hover
+            {
+                background-color: #3b5998;
+                color: #ffffff;
+                cursor: hand;
+            }
+/**********************************************
+CSS file for Appointment Booking Pro Front End
+***********************************************/
+
+#sv_apptpro_request {
+	background-color:#FFFFFF;
+	border:dashed;
+	border-width:1px;
+	border-color:#999999;
+        padding:4px;
+	/* un-comment the following line to set booking screen width */
+	/*width:500px;*/
+}
+
+#sv_apptpro_request td, tr{
+    border:2px;
+}
+
+#sv_apptpro_request h3{
+    font-size:24px;
+    margin-top:0px;
+    padding:10px;
+}
+
+#sv_apptpro_request_gad {
+	background-color:#FFFFFF;
+	border:solid;
+	border-width:1px;
+	border-color:#999999;
+    padding:4px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	/* un-comment the following line to set booking screen width */
+	/*width:700px;*/
+}
+
+#sv_apptpro_request_gad td, tr{
+    border:0px;
+/*    padding-top:6px !important;*/
+	margin-top:5px;
+    vertical-align:top;
+}
+
+#sv_apptpro_request_gad h3{
+    font-size:24px;
+    margin-top:0px;
+	padding-top:10px;
+	padding-bottom:15px;
+	padding-left:10px;
+	border:thin solid #b2b2b2;
+	background-color:#f9f9f9;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.sv_apptpro_request_dropdown {
+	/* un-comment the following line to override template colors */
+	/*color:#000000;*/ 
+}
+
+.sv_apptpro_request_text {
+	/* un-comment the following line to override template colors */
+	/*color:#000000;*/ 
+}
+
+.sv_apptpro_request_label {
+        text-align:left;
+        vertical-align:top;
+/*min-width:80px;*/
+	/* un-comment the following line to override template colors */
+	/*color:#000000;*/ 
+}
+
+.sv_apptpro_request_select_user_label {
+	background-color:#FFFFCC;
+}
+
+#sv_apptpro_print {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+	border:dashed;
+	border-width:1px;
+}
+
+#sv_apptpro_print td{
+	font-size:14px;
+}
+
+
+.sv_apptpro_request_cancel_row {
+	background-color:#FFFFCC;
+}
+
+#sv_apptpro_front_desk {
+    width:100%;
+	background-color:#FFFFFF;
+	border-width:1px;
+	border-color:silver;
+}
+
+/* Calendar view settings */
+.calendar_text{
+	font-family: Arial, Helvetica, sans-serif;    
+    font-size:10px;
+}
+.calendarHeader { 
+    font-weight: bolder; 
+    font-size:16px;
+}
+.calendarHeaderDays { 
+    font-weight: bolder; 
+    background-color:#E7E7E7;
+	border: solid 1px;
+}
+
+.calendarToday { 
+    background-color:#FFFFCC;
+}
+
+.calendar { 
+    border: solid 1px;
+    font-size:12px;    
+    padding:2px;
+}
+
+
+.calendarCell {
+    height:50px;
+    border: solid 1px;
+}
+
+.calendar_day_number{
+    color:Navy;
+}
+
+.calendar_week_view{
+    background-color: #FFFFFF; 
+    border: solid 1px;
+    font-size:12px;    
+    padding:2px;
+}
+
+.calendar_week_view_header_row{
+    height:30px;
+    margin:10px; 
+}
+
+.week_day_table{
+    border: solid 1px;
+    background:transparent;
+}
+
+.week_row_header{
+    color:Navy;
+    line-height:15px;
+    background-color:#F6F6F6;
+    font-size:11px;
+}
+
+.week_row{
+    font-size:12px;
+    line-height:15px;
+}
+
+.week_row0{
+    font-size:12px;
+    line-height:15px;
+}
+.week_row1{
+    font-size:12px;
+    line-height:15px;
+	background-color:#F6F6F6;
+}
+
+
+.row0{	
+	font-size:11px;
+}	 
+
+.row1{	
+	background-color:#F6F6F6;
+	font-size:11px;
+}	 
+
+.detail_row0{	
+	background-color:#FFFFFF;
+	font-size:12px;
+}	 
+
+.detail_row1{	
+	background-color:#F6F6F6;
+	font-size:12px;
+}	 
+		 
+.admin_detail_row0 {
+	background-color:#FFFFFF;
+	font-size:12px;
+	vertical-align:middle;
+}
+
+.admin_detail_row1 {
+	background-color:#F6F6F6;
+	font-size:12px;
+	vertical-align:middle;
+}
+ 
+.sv_apptpro_errors {
+    color:#FF0000;
+	font-size:16px;
+	font-weight:bold;
+}
+
+.sv_gad_timeslot_available {
+	display: inline;		
+	border:solid;
+	border-width:1px; 
+	border-color:#33CC00;
+	background-color:#CCFFCC;
+	height:20px;
+	padding:1px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin-top: 5px;
+	}
+
+.sv_gad_timeslot_available_staff {
+	display: inline;
+	border:solid;
+	border-width:1px; 
+	border-color:#33CC00;
+	background-color:#e5fbf1;
+	height:20px;
+	padding:1px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin-top: 5px;
+}
+
+.sv_gad_timeslot_available_timeony {
+	display: inline;
+	border:solid;
+	border-width:1px; 
+	border-color:#33CC00;
+	background-color:#CCFFCC;
+	min-height:20px;
+	padding:1px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin-top: 5px;
+}
+
+.sv_gad_timeslot_available img {
+	position: relative;
+	top: 50%;
+	  -webkit-transform: translateY(-50%);
+	  -ms-transform: translateY(-50%);
+	  transform: translateY(-50%);			
+}
+		 
+.sv_gad_timeslot_clickable{
+	display: block;
+    height:100%;
+	outline-offset: 0px !important;
+    font-size:16px !important;
+}
+
+.sv_gad_timeslot_booked {
+	display: inline;
+	border:solid;
+	border-width:1px; 
+	border-color:#FF0000;
+	background-color:#FFCECE;
+	height:20px;
+	padding:1px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin-top: 5px;
+}		 
+
+.sv_gad_timeslot_booked_timeony{
+	display: inline;
+	border:solid;
+	border-width:1px; 
+	border-color:#FF0000;
+	background-color:#FFCECE;
+	height:20px;
+	padding:1px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin-top: 5px;
+}		 
+
+.sv_gad_timeslot_booked img {
+	position: relative;
+	top: 50%;
+	  -webkit-transform: translateY(-50%);
+	  -ms-transform: translateY(-50%);
+	  transform: translateY(-50%);			
+}
+
+.sv_gad_timeslot_pending {
+	display: inline;
+	border:dashed;
+	border-width:1px; 
+	border-color:#FF0000;
+	background-color:#FFCECE;
+	height:20px;
+	padding:1px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin-top: 5px;
+}		
+
+.sv_gad_timeslot_pending_timeony {
+	display: inline;
+	border:dashed;
+	border-width:1px; 
+	border-color:#FF0000;
+	background-color:#FFCECE;
+	height:20px;
+	padding:1px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin-top: 5px;}		
+
+.sv_gad_timeslot_pending img {
+	position: relative;
+	top: 50%;
+	  -webkit-transform: translateY(-50%);
+	  -ms-transform: translateY(-50%);
+	  transform: translateY(-50%);}
+
+.sv_gad_timeslot_book-off {
+	display: block;
+	border:solid;
+	border-width:1px; 
+	border-color:#FFCC00;
+	background-color:#FFFFCC;
+	height:20px;
+	padding:1px;
+	margin-top: 5px;
+}
+
+.sv_gad_timeslot_book-off_timeony {
+	display: block;
+	border:solid;
+	border-width:1px; 
+	border-color:#FFCC00;
+	background-color:#FFFFCC;
+	height:20px;
+	padding:1px;
+	margin-top: 5px;
+}
+
+.sv_gad_timeslot_book-off img {
+	position: relative;
+	top: 50%;
+	  -webkit-transform: translateY(-50%);
+	  -ms-transform: translateY(-50%);
+	  transform: translateY(-50%);			
+}
+
+.sv_gad_timeslot_selected {
+	display: inline;
+	border:solid;
+	border-width:1px; 
+	border-color: #999;
+	background-color:#FF0;
+	height:20px;
+	padding:1px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin-top: 5px;
+}		
+
+.sv_gad_timeslot_selected_timeony {
+	display: inline;
+	border:solid;
+	border-width:1px; 
+	border-color: #999;
+	background-color:#FF0;
+	height:20px;
+	padding:1px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin-top: 5px;
+}		 
+
+.sv_gad_timeslot_selected img {
+	position: relative;
+	top: 50%;
+	  -webkit-transform: translateY(-50%);
+	  -ms-transform: translateY(-50%);
+	  transform: translateY(-50%);	
+}
+
+.sv_gad_user_selection{
+}
+
+.sv_gad_user_selection td{
+	padding-left:5px;
+}
+
+#sv_gad_user_selection_div{
+}
+
+.sv_gad_user_selection_table{
+	border-collapse: collapse;
+	border-style:solid;
+	border-width:1px;
+	border-color:#33CC00;
+}
+
+.sv_gad_user_selection_row{
+}
+.sv_gad_user_selection_row td{
+	padding-left:5px;
+	padding-right:5px;
+	border-style:solid;
+	border-width:1px;
+	border-color:#33CC00;
+}
+
+
+
+.sv_gad_timeslot_header {
+	border:solid;
+	border-width:1px; 
+	border-color:#0033CC;
+	#border-right:1px;
+	color:#0033CC;
+	background-color:#FFFFFF;
+	height:18px;
+	padding:0px;
+	margin-top:0px;
+}
+
+.sv_gad_timeslot_yaxis_header {
+/*	border-bottom:solid;
+	border-bottom-width:1px; 
+	border-bottom-color:#0033CC;
+	border-right:dotted;
+	border-right:1px;
+	border-right-color:#0033CC;
+	color:#0033CC;*/
+	font-size:10px;
+	min-height:20px;        
+}
+
+.sv_gad_row_wrapper {
+	min-height:20px;
+}		 
+
+.sv_gad_row_wrapper_mobile {
+	color:#0033CC;
+	min-height:30px;
+}		 
+		 
+.sv_gad_container_table {
+	margin-top:10px;
+	margin-bottom:10px;
+/*	border:dotted;
+	border-width:1px; 
+	border-color:#CCCCCC;
+*/}		 
+		 
+.sv_apptpro_selected_resource {
+	font-weight:bold;
+	color:#0000CC;
+	padding-left:20px;
+}		 
+
+.sv_gad_legend{
+	color:#0033CC;
+	font-size:10px;
+	line-height:25px;
+	/*background-color:#CCFFCC;*/
+
+}
+table#sv_gad_outer_table tr td{
+	height:30px;
+	border-top:solid;
+	border-top-width:1px; 
+	border-top-color:#CCC;
+}		 
+
+.gad_header_row td{
+	/*background-color: #FFC;*/
+	vertical-align:middle !important;
+}	
+		
+/*.title{
+	border-bottom:1px solid #666666; 
+}*/
+			 
+ 
+
+div.current {
+   clear: both;
+   border: 1px solid #ccc;
+   padding: 10px 10px;
+}
+div.current dd {
+   padding: 0;
+   margin: 0;
+}
+ 
+#resource_udfs_div {
+  /* background: #F9F9F9;*/
+   margin-top:10px;
+   margin-bottom:10px;
+}		 
+		 
+/* Mobile settings */
+.mobile_title{
+	border-bottom:1px solid #666666; 
+}
+
+#sv_apptpro_request_gad_mobile {
+	font-family: Arial, Helvetica, sans-serif;
+/*	background-color:#FFFFFF;*/
+    padding-left:4px;
+    padding-right:4px;
+	border:solid;
+	border-width:1px;
+	border-color:#999999;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	
+	/* un-comment the following line to set booking screen width */
+	/*width:500px;*/
+}
+
+#sv_apptpro_request_gad_mobile h3{
+    font-size:20px;
+    margin-top:0px;
+	padding-top:10px;
+	padding-bottom:15px;
+	padding-left:10px;
+	border:thin solid #b2b2b2;
+	background-color:#f9f9f9;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.sv_grid_button_mobile{
+	font-size:18px;
+	height:20px;
+}
+	
+.button_mobile{
+	height:30px; 
+	font-size:18px;
+}
+	 
+.sv_apptpro_request_dropdown_mobile {
+	font-family: Arial, Helvetica, sans-serif;
+	height:30px; 
+	font-size:20px;
+	/* un-comment the following line to override template colors */
+	/*color:#000000;*/ 
+}
+		 
+.sv_apptpro_selected_resource_mobile {
+        font-weight:bold;
+	color:#0000CC;
+}		 
+
+.sv_apptpro_request_text_mobile {
+	font-family: Arial, Helvetica, sans-serif;
+	height:25px; 
+	font-size:16px;
+	/* un-comment the following line to override template colors */
+	/*color:#000000;*/ 
+}
+
+.links_mobile {
+	font-size:18px;
+}
+
+.checkbox_mobile {
+	height:20px; 
+	width:20px; 
+	font-size:20px;
+}
+
+.calendar_list_row_mobile {
+	height: 30px; 
+	font-size: 18px;
+}
+		 
+.calendarHeader_mobile { 
+    font-weight: bolder; 
+    font-size:18px;
+}
+ 
+/* color codes for front desk month view */
+.calendar_text_new {
+	font-family: Arial, Helvetica, sans-serif;    
+    font-size:10px;
+	color:#CC66FF;
+}		 
+.color_new{
+	color:#CC66FF;
+}
+.calendar_text_new a:link, calendar_text_new a:visited, calendar_text_new a:hover{
+	font-family: Arial, Helvetica, sans-serif;    
+    font-size:10px;
+	color:#CC66FF;
+}		 
+.calendar_text_accepted {
+	font-family: Arial, Helvetica, sans-serif;    
+    font-size:10px;
+	color:#009900;
+}		 
+.color_accepted{
+	color:#009900;
+}
+.calendar_text_accepted a:link, calendar_text_accepted a:visited, calendar_text_accepted a:hover{
+	font-family: Arial, Helvetica, sans-serif;    
+    font-size:10px;
+	color:#009900;
+}		 
+.calendar_text_pending {
+	font-family: Arial, Helvetica, sans-serif;    
+    font-size:10px;
+	color:#FF9900;
+}		 
+.color_pending{
+	color:#FF9900;
+}
+.calendar_text_pending a:link, calendar_text_pending a:visited, calendar_text_pending a:hover{
+	font-family: Arial, Helvetica, sans-serif;    
+    font-size:10px;
+	color:#FF9900;
+}		 
+.calendar_text_declined {
+	font-family: Arial, Helvetica, sans-serif;    
+    font-size:10px;
+	/*color:#FF9900;*/
+}		 
+.color_declined{
+	/*color:#FF9900;*/
+}
+.calendar_text_declined a:link, calendar_text_declined a:visited, calendar_text_declined a:hover{
+	font-family: Arial, Helvetica, sans-serif;    
+    font-size:10px;
+	/*color:#FF9900;*/
+}		 
+.calendar_text_canceled {
+	font-family: Arial, Helvetica, sans-serif;    
+    font-size:10px;
+	color:#FF0000;
+}		 
+.color_canceled{
+	color:#FF0000;
+}
+.calendar_text_canceled a:link, calendar_text_canceled a:visited, calendar_text_canceled a:hover{
+	font-family: Arial, Helvetica, sans-serif;    
+    font-size:10px;
+	color:#FF0000;
+}		 
+.calendar_text_no_show {
+	font-family: Arial, Helvetica, sans-serif;    
+    font-size:10px;
+	/*color:#FF9900;*/
+}		 
+.color_no_show{
+	/*color:#FF9900;*/
+}
+.calendar_text_no_show a:link, calendar_text_no_show a:visited, calendar_text_no_show a:hover{
+	font-family: Arial, Helvetica, sans-serif;    
+    font-size:10px;
+	/*color:#FF9900;*/
+}		 
+.calendar_text_attended {
+	font-family: Arial, Helvetica, sans-serif;    
+    font-size:10px;
+	/*color:#FF9900;*/
+}		 
+.color_attended{
+	/*color:#FF9900;*/
+}
+.calendar_text_attended a:link, calendar_text_attended a:visited, calendar_text_attended a:hover{
+	font-family: Arial, Helvetica, sans-serif;    
+    font-size:10px;
+	/*color:#FF9900;*/
+}		 
+.calendar_text_completed {
+	font-family: Arial, Helvetica, sans-serif;    
+    font-size:10px;
+	/*color:#FF9900;*/
+}		 
+.color_completed{
+	/*color:#FF9900;*/
+}
+.calendar_text_completed a:link, calendar_text_completed a:visited, calendar_text_completed a:hover{
+	font-family: Arial, Helvetica, sans-serif;    
+    font-size:10px;
+	/*color:#FF9900;*/
+}		 
+.calendar_text_deleted {
+	font-family: Arial, Helvetica, sans-serif;    
+    font-size:10px;
+	/*color:#FF9900;*/
+}		 
+.color_deleted{
+	/*color:#FF9900;*/
+}
+.calendar_text_deleted a:link, calendar_text_deleted a:visited, calendar_text_deleted a:hover{
+	font-family: Arial, Helvetica, sans-serif;    
+    font-size:10px;
+	/*color:#FF9900;*/
+}		 
+.calendar_text_timeout {
+	font-family: Arial, Helvetica, sans-serif;    
+    font-size:10px;
+	color:#F69;
+}		 
+.color_timeout{
+	color:#F69;
+}
+
+.calendar_text_bookoff {
+    font-family: Arial, Helvetica, sans-serif;    
+    font-size:10px;
+    font-weight:bold;
+    color:#FFF;
+    background:#F00;
+}
+
+		
+.sv_gad_legend_mobile{
+	color:#0033CC;
+	font-size:8px;
+	line-height:18px;
+	/*background-color:#CCFFCC;*/
+}
+
+
+/* new in 1.4.4 */
+
+.sv_gad_non_work_day {
+	display: block;
+	border:solid;
+	border-width:1px; 
+	border-color:#FFCC00;
+	background-color:#FFFFCC;
+	height:20px;
+	padding:1px;
+}	
+
+		 
+#resource_extras_div{
+	margin-top:10px;
+	margin-bottom:10px;
+/*	padding-left:5px;
+    background-color:#F4FBEA;
+	border:thin solid #bee274;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+    /*width:500px;*/*/
+} 		 
+		 
+#resource_seat_types_div{
+	margin-top:10px;
+	margin-bottom:10px;
+/*	padding-left:5px;
+    background-color:#FAFAF1;
+	border:thin solid #d9d996;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+*/    /*width:500px;*/
+} 
+		 
+#booking_detail_div{
+	background-color:#CCFFCC;
+	border:thin solid #59ff59;
+	padding:10px;
+	padding-bottom:0px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+		 
+
+.gad2_grid{
+
+}
+.gad2_row{
+	border-top:#999 thin;
+	text-align:left;
+}
+
+.gad2_legend{
+    marging-top:10px;
+	font-size:10px;
+	line-height:25px;
+}
+
+		
+#cell_container{
+     background-color:#FAFAF1;
+} 
+		 
+#svlabel{
+	float:left; 
+	width:auto; 
+	margin-left:0.5em; 
+	margin-right:0.5em; 
+	padding-top:4px;
+} 
+		
+
+#sv_apptpro_mybookings{ 
+     /*background-color:#FAFAF1;*/
+}
+
+#sv_apptpro_mybookings td, tr{
+    border:0px;
+    padding:4px;
+}
+
+#sv_apptpro_mybookings h3{
+    font-size:24px;
+    margin-top:0px
+}
+ 
+$sv_apptpro_fe_admin {
+
+}
+
+#sv_apptpro_fe_admin td, tr{
+    border:0px;
+    padding:4px;
+    font-size:12px;
+}
+
+#sv_apptpro_fe_admin h3{
+    font-size:24px;
+    margin-top:0px
+}
+ 
+#sv_apptpro_fe_adv_admin{
+
+}
+
+#sv_apptpro_fe_adv_admin td, tr{
+}
+
+#sv_apptpro_fe_adv_admin h3{
+}
+		 
+/* override of Joomla 1.6 default template setting max div width to 500 */
+div.current {
+    max-width:2000px!important;
+}
+		 
+#sv_apptpro_fe_detail {
+
+}
+
+#sv_apptpro_fe_detail td, tr{
+    border:0px;
+    padding:4px;
+    font-size:12px;
+}
+
+#sv_apptpro_fe_detail h3{
+    font-size:24px;
+    margin-top:0px
+}
+
+#sv_apptpro_fe_resource_detail {
+
+}
+		
+#sv_apptpro_fe_resource_detail td, tr{
+    border:0px;
+    padding:4px;
+    font-size:12px;
+}
+
+#sv_apptpro_fe_resource_detail h3{
+    font-size:24px;
+    margin-top:0px
+}
+
+#sv_apptpro_fe_service_detail {
+
+}
+		
+#sv_apptpro_fe_service_detail td, tr{
+    border:0px;
+    padding:4px;
+    font-size:12px;
+}
+
+#sv_apptpro_fe_service_detail h3{
+    font-size:24px;
+    margin-top:0px
+}
+ 
+#sv_apptpro_fe_timeslot_detail {
+
+}
+		
+#sv_apptpro_fe_timeslot_detail td, tr{
+    border:0px;
+    padding:4px;
+    font-size:12px;
+}
+
+#sv_apptpro_fe_timeslot_detail h3{
+    font-size:24px;
+    margin-top:0px
+}
+		 
+#sv_apptpro_fe_bookoff_detail {
+
+}
+		
+#sv_apptpro_fe_bookoff_detail td, tr{
+    border:0px;
+    padding:4px;
+    font-size:12px;
+}
+
+#sv_apptpro_fe_bookoff_detail h3{
+    font-size:24px;
+    margin-top:0px
+}
+		 
+#sv_apptpro_fe_coupon_detail {
+
+}
+		
+#sv_apptpro_fe_coupon_detail td, tr{
+    border:0px;
+    padding:4px;
+    font-size:12px;
+}
+
+#sv_apptpro_fe_coupon_detail h3{
+    font-size:24px;
+    margin-top:0px
+}
+		 
+#sv_apptpro_fe_extras_detail {
+
+}
+		
+#sv_apptpro_fe_extras_detail td, tr{
+    border:0px;
+    padding:4px;
+    font-size:12px;
+}
+
+#sv_apptpro_fe_extras_detail h3{
+    font-size:24px;
+    margin-top:0px
+}
+		 
+#sv_apptpro_front_desk {
+
+}
+		
+#sv_apptpro_front_desk td, tr{
+/*    border:0px;*/
+    padding:4px;
+    font-size:12px;
+}
+
+#sv_apptpro_front_desk h3{
+    font-size:24px;
+    margin-top:0px
+} 
+
+#sv_apptpro_front_desk_top td, tr{
+    border:0px;
+    padding:4px;
+    font-size:12px;
+}
+
+#calview_here {
+    padding-left:2px;
+}  
+
+.calcResults_outside {
+	border:solid 1px #000;
+}
+
+.calcResults_header{
+	background-color:#ededed;
+	border-top:solid 1px #000;
+	text-align:center;
+}
+
+.sv_readonly_background{
+     background-color:#F0F0F0;
+	 color:#666;
+}      
+
+#sv_apptpro_fe_detail_read_only{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+} 
+
+.fe_header_bar{
+     background-color:#FFFF00;
+     border-top:solid 1px !important;
+     border-bottom:solid 3px !important;
+	 text-align:right;
+}  
+
+.wiz_header_bar{
+     background-color:#e3fce3;
+     border-top:solid #CCC 1px; 
+     border-bottom:solid #CCC 1px;
+	 text-align:right;
+} 
+
+.wiz_button{
+/*	float:left !important; */
+/*  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #196696);
+  background-image: -moz-linear-gradient(top, #3498db, #196696);
+  background-image: -ms-linear-gradient(top, #3498db, #196696);
+  background-image: -o-linear-gradient(top, #3498db, #196696);
+  background-image: linear-gradient(to bottom, #3498db, #196696);
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  text-shadow: 1px 1px 3px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight:bold;
+  padding: 4px 16px 4px 16px;
+  text-decoration: none;*/	
+}
+
+.wiz_button:hover {
+/*  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;*/
+}
+
+.booking_header{
+     border-top:solid #CCC 1px !important; 
+     border-bottom:solid #CCC 1px !important;
+} 
+
+.booking_footer{
+     border-top:solid #CCC 1px !important;
+     border-bottom:solid #CCC 1px !important;
+} 
+ 
+.resource_selector{
+    background-color:#F0F0F0;
+	border:thin solid #CCC;
+}
+
+.category_selector{
+    background-color:#F0F0F0;
+	border:thin solid #CCC;
+}
+
+.service_selector{
+    background-color:#F0F0F0;
+	border:thin solid #CCC;
+}
+
+
+.booking_title{
+	padding-top:10px;
+}
+
+.fe_admin_header{
+     background-color:#F4F4F4;
+	 /*color:#000;*/
+} 
+ 
+.sv_apptpro_user_search tr, td{
+	border:0pt;
+}
+		
+.sv_select select { 
+	display:list-item !important;
+	width:auto;
+	min-width: 100px;
+	min-height:80px;
+} 
+.sv_order_style {
+	width:30px; 
+	text-align: center;
+}
+.sv_date_box {
+	width:100px; 
+	text-align: center;
+}
+
+.sv_date_box_mobile {
+	width:140px; 
+	text-align: center;
+}
+
+.admin_dropdown {
+	width:auto;
+} 
+		
+#sv_alertWindow {
+  display: none;
+  border: 1px solid #333;
+  width: 600px;
+  height: 400px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color:#FFFFFF;
+  z-index:3200;
+  position:absolute;
+}
+
+#sv_alertWindowMobile {
+  display: none;
+  border: 1px solid #333;
+  width: 250px;
+  height: 350px;
+  border-radius: 5px;
+  padding: 2px;
+  background-color:#FFFFFF;
+  z-index:3200;
+  position:absolute;
+  left: 2;
+}
+#btnOk, #btnCancel {  }
+
+.svCartFixedHeightContainer
+{
+  display: none;
+  height: 400px;
+  width:640px; 
+  padding:3px; 
+  z-index:3200;
+  position:absolute;
+}
+
+.svCartPopupContent
+{
+  height:350px;
+  overflow:auto;
+  /*background:#ffc;*/
+}
+
+#sv_footer {
+  width:85%;
+  text-align:center;
+  margin: auto; 
+  margin-top:10px;
+  padding: 10px; 
+
+  border: 1px solid #d8d8d8; 
+  background: #f9f9f9;
+ 
+  -moz-border-radius: 4px; 
+  -webkit-border-radius: 4px; 
+  border-radius: 4px; 
+  -moz-box-shadow: inset 0 0 0 1px #fff;
+  -webkit-box-shadow: inset 0 0 0 1px #fff;
+  box-shadow: inset 0 0 0 1px #fff;
+
+ } 
+		 
+#sv_header {
+  text-align:center;
+/*  border-top:solid thin #d8d8d8;
+  border-bottom:solid thin #d8d8d8; */
+  padding-bottom:15px; 
+}   
+		
+.sv_udf_radio_table{
+  /*width:70%;*/
+} 
+
+.sv_udf_radio_table input, sv_udf_radio_table td{		 
+  display:table-cell;
+  vertical-align:text-bottom;
+}  
+		 
+.sv_udf_radio_text{
+  padding-left:5px;
+  padding-right:10px;
+}		 
+.display_grid_date{
+color:#f00;
+}		 
+		 
+#cart_dialog {
+/*background-color:#FFC;*/
+} 
+
+#sv_apptpro_view_cart table{
+background-color:#FFC;
+}		 
+		
+.sv_help_icon{
+ vertical-align:top;
+} 
+
+.sv_yellow_bar{
+  background-color:#FFFF00;
+}
+		 
+.row0_mobile{	
+	font-size:11px;
+	height:40px;
+}	 
+
+.row1_mobile{	
+	background-color:#F6F6F6;
+	font-size:11px;
+	height:40px;
+}	 
+ 
+.sv_select_mobile { 
+	display:list-item !important;
+	min-width: 100px;
+	min-height:80px;
+} 
+
+.row30px{	
+	height:30px;
+}	 
+
+/* tabs  */		
+#tabs { width: 100%; }
+ #tabs .ui-tabs-nav { padding: .2em .1em .2em .2em;  width: 99%; background:#CCC; }
+ #tabs .ui-tabs-nav li a { display:block; }
+ #tabs .ui-tabs-panel { border-width: 0px 1px 1px 1px; clear:left; padding-top:10px; padding-left:4px; padding-right:4px }
+
+
+	
+/* tabs for mobile advanced admin */		
+#tabs-mobile { width: 99%; }
+ #tabs-mobile .ui-tabs-nav { padding: .2em .1em .2em .2em;  width: 98%; background:#CCC; }
+ #tabs-mobile .ui-tabs-nav li { clear: left; width: 99%;  background:#FFFFFF;}
+ #tabs-mobile .ui-tabs-nav li a { display:block; }
+ #tabs-mobile .ui-tabs-nav li.ui-tabs-selected { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; border-right-width: 1px; background-color:#EFEFEF  }
+ #tabs-mobile .ui-tabs-panel { border-width: 0px 1px 1px 1px; clear:left; padding-top:10px; padding-left:4px; padding-right:4px }
+
+
+#mobile_datepicker {
+  background-color: #FF0000;
+  height: 200px;
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  width: 200px;
+  margin: -100px 0 0 -100px;
+} 
+		
+.sv_gad_timeslot_gap {
+	display: inline;
+	border:solid;
+	border-width:1px; 
+	border-color:#FFCC00;
+	background-color:#FFFFCC;
+	height:20px;
+	padding:1px;
+	margin-top: 5px;
+}
+ 
+.extras_block{
+ /*   width:80%;*/
+}
+
+.ui-datepicker{ z-index: 9999 !important;}
+ 
+/*CSS for ddSlick */
+#css-ddslick {}
+.dd-select{ border-radius:2px; border:solid 1px #ccc; position:relative; cursor:pointer;}
+.dd-desc { color:#0088cc; display:block; overflow: hidden; font-weight:normal; line-height: 1.4em; } 
+.dd-selected{ overflow:hidden; display:block; padding:10px; font-weight:bold;}
+.dd-pointer{ width:0; height:0; position:absolute; right:10px; top:50%; margin-top:-3px;}
+.dd-pointer-down{ border:solid 5px transparent; border-top:solid 5px #000; }
+.dd-pointer-up{border:solid 5px transparent !important; border-bottom:solid 5px #000 !important; margin-top:-8px;}
+.dd-options{ border:solid 1px #ccc; border-top:none; list-style:none; box-shadow:0px 1px 5px #ddd; display:none; position:absolute; z-index:2000; margin:0; padding:0;background:#fff; overflow:auto;}
+.dd-option{ padding:10px; display:block; border-bottom:solid 1px #ddd; overflow:hidden; text-decoration:none; color:#333; cursor:pointer;-webkit-transition: all 0.25s ease-in-out; -moz-transition: all 0.25s ease-in-out;-o-transition: all 0.25s ease-in-out;-ms-transition: all 0.25s ease-in-out; }
+.dd-options > li:last-child > .dd-option{ border-bottom:none;}
+.dd-option:hover{ background:#f3f3f3; color:#000;}
+.dd-selected-description-truncated { text-overflow: ellipsis; white-space:nowrap; }
+.dd-option-selected { background:#f6f6f6; }
+.dd-option-image, .dd-selected-image { vertical-align:middle; float:left; margin-right:5px; max-width:128px;}
+.dd-image-right { float:right; margin-right:15px; margin-left:5px;}
+.dd-container{ position:relative;}​ .dd-selected-text { font-weight:bold}
+
+
+.wiz_header_bar input[type=button] {
+    border: 1px solid #E0F9F9;
+    color: #fff;
+    background: #4AA44A;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.wiz_header_bar input[type=button]:hover {
+    background: #186B18;
+}
+
+/* this will change all 'buttons' in the GAD or Wizard booking screens*/
+/*#sv_apptpro_request_gad input[type=button] {
+    border: 1px solid #E0F9F9;
+    color: #fff;
+    background: #4AA44A;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#sv_apptpro_request_gad input[type=button]:hover {
+    background: #186B18;
+}
+*/
+/* this will change the 'submit' button in the GAD or Wizard booking screens*/
+#sv_apptpro_request_gad input[type=submit] {
+    border: 1px solid #125050;
+    color: #000;
+    background: #6FBDBD;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#sv_apptpro_request_gad input[type=submit]:hover {
+    background: #125050;
+    color: #fff;
+}
+
+
+/* this will change buttons in the GAD or Wizard grid */
+/*.sv_gad_container_table input[type=button] {
+    border: 1px solid #f00 !important;
+    color: #fff;
+    background: #00f !important;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.sv_gad_container_table input[type=button]:hover {
+    background: #f00 !important;
+}
+*/
+
+.submit_section{
+	text-align:center;
+	
+}
+
+/* this will change the buttons in the submit section , coupon, gift cert, etc. */
+.submit_section input[type=button] {
+    border: 1px solid #f00 !important;
+    color: #5F5F5F !important;
+    background: #ccc !important;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.submit_section input[type=button]:hover {
+    background: #ddd !important;
+}
+ 
+/* override Joomla table-stripped background color */
+#sv_apptpro_request_gad .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+   background-color: #F0F0F0 !important;
+}		  
+   
+.resource_image {
+    padding-top:10px;
+    max-height: 64px;
+} 
+
+.resource_label {
+	font-size:14px !important;
+} 
+
+.sv_gad_slots_row_wrapper {
+	height:35px!important;
+	vertical-align:text-bottom;
+}		 
+ 
+.sv_tablet_row {
+	height:60px;
+}
+		 
+.sv_table {
+	 display: table;
+	 width:100%;
+}
+
+.sv_table_cell_name{
+	display:table-cell;
+	width:20%;
+    padding-left:10px;
+}
+
+.sv_table_cell_value{
+	display:table-cell;
+	padding-left:10px;
+	/*padding-bottom:5px;*/
+}
+
+.sv_table_row{
+	display:table-row;
+}
+
+.sv_udf_cell_value{
+	/*padding-bottom:10px;*/
+}
+
+.sv_apptpro_request_helptext {
+	font-size:10px;
+	/*color:#666666;*/
+	/*line-height:20px;*/
+	padding-bottom:15px;
+}
+
+.body sv_h3 {
+	/*font-weight:bold;*/ 
+}
+
+
+#accordion_grid { 
+
+}
+
+#common_udfs_div{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.seats_block{
+	width:100%;
+}
+
+	
+#sv_accordion .ui-accordion-content {
+    margin: 0;
+    padding: 10px;
+}
+
+#sv_accordion .ui-accordion-header {
+    background-color: #ccc;
+    margin: 0px;
+}
+
+#sv_apptpro_purcase_uc {
+}
+
+#sv_apptpro_purcase_uc h3{
+    font-size:24px;
+    margin-top:0px
+}
+
+.product_mobile_row {
+	padding:10px;
+	border-bottom:solid thin #333;
+} 
+		
+.product_image{
+    padding-top:10px;
+    max-height: 64px;
+}
+
+.recaptcha_mobile{
+	max-width:200px;
+	transform:scale(0.77);
+	-webkit-transform:scale(0.77);
+	transform-origin:0 0;
+	-webkit-transform-origin:0 0;
+}
+
+#summary_name, #summary_email, #summary_phone, #summary_cat, #summary_resource, 
+#summary_service, #summary_extras, #summary_datetime, #summary_seats{
+	font-weight:bold;
+}
+
+#cancel_results{
+	color:#F00;
+	font-weight:bold;
+}
+
+#sv_codeblock_submit{
+booked_seats_div
+}
+
+#booked_seats_div{
+	font-size:16px;
+	font-weight:bold;
+	padding-left:15px;
+}
+
+.abpro_confirmation_screen{
+	padding:20px !important;
+} 
+
+#pay_proc_buttons {
+	padding:10px;
+}
+
+.sv_recaptcha{
+	padding:10px;
+} 
+		 
+/* labels for parts of the booking costs table
+res_rate_label
+res_hours_label
+res_rate_total_label
+currency_label
+res_rate
+res_hours
+res_total
+extras_fee_label
+extras_fee
+additional_fee_label
+res_fee
+discount_label
+discount
+gc_credit_label
+gc_credit
+credit_label
+uc_credit
+total_label
+res_grand_total
+deposit_label
+display_deposit_amount
+*/
+.sv_apptpro_request_label#res_rate_label, #res_rate_total_label{
+	padding:3px;
+	text-align:center;
+	color:#0000FF;
+}		 
+
+.sv_apptpro_request_label#extras_fee_label{
+	color:#CC6600;
+}
+		 
+.sv_apptpro_request_label #total_label, #res_grand_total{
+	font-weight:bold;
+}		 
+

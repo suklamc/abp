@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Time Slot Setup</title>
+<link href="../css/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Email Marketing</h1>
+
+<h3>Description</h3>
+<p> ABPro can be setup to add booking customers to your AcyMailing or MailChimp mailing lists.</p>
+<p>&nbsp;</p>
+<h3>MailChimp tab</h3>
+
+
+<p><strong>Enable MailCimp:</strong> Yes to have ABPro add booking customers to MailChimp. You require an account with MailChimp to use this service.</p>
+<p>
+<strong>API Key:</strong> Get this from your MailChimp Account, under `Extras`.</p>
+<p><strong>Split Name: </strong>MailChimp supports Firstname/Lastname but ABPro, like Joomla, only captures a `Name`. If you set this to Yes, ABPro will attempt to split the name into first and last when adding the customer to your MailChimp list.</p>
+<p><strong>Default List:</strong> Select a default MailChimp list to receive new customers.
+You can override this at the ABPro resource level in the resource setup screen.
+Note: ABPro uses the API Key to fetch lists so when you first setup this screen you will need to enter your API Key, Save, then re-open the screen to see your lists.
+</p>
+<p><strong>Send Welcome</strong>: If set to Yes, ABPro will set the `Send Welcome` flag in the MailChimp API call to add a user.</p>
+<p>&nbsp;</p>
+<h3>AcyMailing tab</h3>
+<p><strong>Enable AcyMailing: :</strong> You must have the AcyMainling Joomla component installed to use it from ABPro.</p>
+<p><strong>Default List: </strong> Select a default AcyMailing list to receive new customers.
+You can override this at the ABPro resource level in the resource setup screen.</p>
+<p>&nbsp;</p>
+<p><br />
+</p>
+<div align="center" style="margin-top: 30px; margin-bottom: 30px;">
+  <a href="#" onclick="javascript:window.close();"><span class="small">Close Window</span></a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<metadata>
+ 	<layout title="ABPro Front Desk">
+		<message>
+			<![CDATA[COM_RSAPPT_PRO3_FRONT_DESK_VIEW_DEFAULT_TITLE]]>
+		</message>
+	</layout>
+
+	<fields name="params">
+		<fieldset name="params"	label="RS1_FD_BASIC_OPTIONS_FIELDSET_LABEL">
+		
+		<field name="fd_start_screen" type="list" default="month"
+			label="RS1_FD_START_LABEL" description="RS1_FD_START_HELP">
+			<option value="month">RS1_FD_START_MONTH</option>
+			<option value="week">RS1_FD_START_WEEK</option>
+			<option value="day">RS1_FD_START_DAY</option>
+		</field>
+		<field name="spacer" type="spacer" class="text" label="RS1_FD_MENU_SPACER" />		
+		<field name="fd_use_page_title" type="radio"  default="No"
+			label="RS1_FD_USE_PAGE_TITLE_LABEL" description="RS1_FD_USE_PAGE_TITLE_HELP">
+			<option value="Yes">RS1_FD_MENU_YES</option>
+			<option value="No">RS1_FD_MENU_NO</option>
+		</field>
+		<field name="fd_display" type="list"  default="Customer"
+			label="RS1_FD_DISPLAY_LABEL" description="RS1_FD_DISPLAY_HELP">
+			<option value="Customer">RS1_FD_DISPLAY_CUST</option>
+			<option value="Resource">RS1_FD_DISPLAY_RES</option>
+		</field>
+		<field name="fd_tooltip" type="list"  default="Resource"
+			label="RS1_FD_TOOLTIP_LABEL" description="RS1_FD_TOOLTIP_HELP">
+			<option value="Customer">RS1_FD_TOOLTIP_CUST</option>
+			<option value="Resource">RS1_FD_TOOLTIP_RES</option>
+			<option value="None">RS1_FD_TOOLTIP_NONE</option>
+		</field>
+		<field name="res_or_cat" type="list" default="0"
+			label="Screen Display" description="Select optional Single Resource or Single Category. 'Normal' shows all resources. ">
+			<option value="0">Normal</option>
+			<option value="1">Single Resource</option>
+			<option value="2">Single Category</option>
+		</field>
+		<field name="passed_id" type="text" default="" label="Id"
+			description="Enter a resource or category id and ABPro will open the front desk view showing just that single resource or category" />
+
+		<field name="header_text" type="textarea" default="" label="Header Text" filter="raw"
+			description="Enter header text to override the component level header text."/>
+
+		<field name="spacer99" type="spacer" class="text" label="To have the Front Desk open on a specific year/month set the values below. You can specify a month or month/year." />		
+		<field name="start_month" type="list" default=""
+			label="Month" description="Select the month you want the Front Desk to open showing.">
+			<option value="">Current</option>
+			<option value="1">January</option>
+			<option value="2">February</option>
+			<option value="3">March</option>
+			<option value="4">April</option>
+			<option value="5">May</option>
+			<option value="6">June</option>
+			<option value="7">July</option>
+			<option value="8">August</option>
+			<option value="9">September</option>
+			<option value="10">October</option>
+			<option value="11">Novemeber</option>
+			<option value="12">December</option>
+		</field>
+		<field name="start_year" type="list" default=""
+			label="Year" description="Select the year you want the Front Desk to open showing.">
+			<option value="">Current</option>
+			<option value="2017">2017</option>
+			<option value="2018">2018</option>
+			<option value="2019">2019</option>
+			<option value="2020">2020</option>
+			<option value="2021">2021</option>
+			<option value="2022">2022</option>
+			<option value="2023">2023</option>
+		</field>
+
+
+		<field name="spacer1" type="spacer" hr="true" />
+		<field name="fd_res_admin_only" type="radio"  default="Yes"
+			label="RS1_FD_RES_ADMIN_ONLY_LABEL" description="RS1_FD_RES_ADMIN_ONLY_HELP">
+			<option value="Yes">RS1_FD_MENU_YES</option>
+			<option value="No">RS1_FD_MENU_NO</option>
+		</field>
+		<field name="fd_login_required" type="radio"  default="Yes"
+			label="RS1_FD_LOGIN_REQUIRED_LABEL" description="RS1_FD_LOGIN_REQUIRED_HELP">
+			<option value="Yes">RS1_FD_MENU_YES</option>
+			<option value="No">RS1_FD_MENU_NO</option>
+		</field>
+		<field name="fd_read_only" type="radio" default="No"
+			label="RS1_FD_VIEW_ONLY_LABEL" description="RS1_FD_VIEW_ONLY_HELP">
+			<option value="Yes">RS1_FD_MENU_YES</option>
+			<option value="No">RS1_FD_MENU_NO</option>
+		</field>
+		<field name="fd_edit_status_only" type="radio"  default="No"
+			label="RS1_FD_EDIT_STATUS_ONLY_LABEL" description="RS1_FD_EDIT_STATUS_ONLY_HELP">
+			<option value="Yes">RS1_FD_MENU_YES</option>
+			<option value="No">RS1_FD_MENU_NO</option>
+		</field>
+		<field name="fd_allow_show_seats" type="radio"  default="Yes"
+			label="RS1_FD_ENABLE_SHOW_SEATS_LABEL" description="RS1_FD_ENABLE_SHOW_SEATS_HELP">
+			<option value="Yes">RS1_FD_MENU_YES</option>
+			<option value="No">RS1_FD_MENU_NO</option>
+		</field>
+		<field name="fd_allow_cust_hist" type="radio"  default="Yes"
+			label="RS1_FD_ENABLE_CUST_HIST_LABEL" description="RS1_FD_ENABLE_CUST_HIST_HELP">
+			<option value="Yes">RS1_FD_MENU_YES</option>
+			<option value="No">RS1_FD_MENU_NO</option>
+		</field>
+		<field name="fd_allow_manifest" type="radio"  default="Yes"
+			label="RS1_FD_ENABLE_MANIFEST_LABEL" description="RS1_FD_ENABLE_MANIFEST_HELP">
+			<option value="Yes">RS1_FD_MENU_YES</option>
+			<option value="No">RS1_FD_MENU_NO</option>
+		</field>
+		<field name="fd_allow_reminders" type="radio"  default="Yes"
+			label="RS1_FD_ENABLE_REMINDERS_LABEL" description="RS1_FD_ENABLE_REMINDERS_HELP">
+			<option value="Yes">RS1_FD_MENU_YES</option>
+			<option value="No">RS1_FD_MENU_NO</option>
+		</field>
+		<field name="fd_detail_popup" type="radio"  default="Yes"
+			label="RS1_FD_SHOW_DETAILS_LABEL" description="RS1_FD_SHOW_DETAILS_HELP">
+			<option value="Yes">RS1_FD_MENU_YES</option>
+			<option value="No">RS1_FD_MENU_NO</option>
+		</field>
+		<field name="fd_show_contact_info" type="radio"  default="Yes"
+			label="RS1_FD_SHOW_CONTACT_INFO_LABEL" description="RS1_FD_SHOW_CONTACT_INFO_HELP">
+			<option value="Yes">RS1_FD_MENU_YES</option>
+			<option value="No">RS1_FD_MENU_NO</option>
+		</field>
+		<field name="fd_show_udfs" type="radio"  default="Yes"
+			label="RS1_FD_SHOW_UDFS_LABEL" description="RS1_FD_SHOW_UDFS_HELP">
+			<option value="Yes">RS1_FD_MENU_YES</option>
+			<option value="No">RS1_FD_MENU_NO</option>
+		</field>
+		<field name="fd_show_extras" type="radio"  default="Yes"
+			label="RS1_FD_SHOW_EXTRAS_LABEL" description="RS1_FD_SHOW_EXTRAS_HELP">
+			<option value="Yes">RS1_FD_MENU_YES</option>
+			<option value="No">RS1_FD_MENU_NO</option>
+		</field>
+		<field name="fd_show_financials" type="radio"  default="Yes"
+			label="RS1_FD_SHOW_FINANCIALS_LABEL" description="RS1_FD_SHOW_FINANCIALS_HELP">
+			<option value="Yes">RS1_FD_MENU_YES</option>
+			<option value="No">RS1_FD_MENU_NO</option>
+		</field>
+		<field name="fd_show_cats_filter" type="radio"  default="No"
+			label="RS1_FD_SHOW_CATS_LABEL" description="RS1_FD_SHOW_CATS_HELP">
+			<option value="Yes">RS1_FD_MENU_YES</option>
+			<option value="No">RS1_FD_MENU_NO</option>
+		</field>
+		<field name="fd_show_bookoffs" type="radio"  default="Yes"
+			label="RS1_FD_SHOW_BO_LABEL" description="RS1_FD_SHOW_BO_HELP">
+			<option value="Yes">RS1_FD_MENU_YES</option>
+			<option value="No">RS1_FD_MENU_NO</option>
+		</field>
+		<field name="fd_booking_staff_or_public" type="list"  default="Staff"
+			label="RS1_FD_NEW_BOOKING_LABEL" description="RS1_FD_NEW_BOOKING_HELP">
+			<option value="Staff">RS1_FD_NEW_BOOKING_STAFF</option>
+			<!-- removed, no longer works with SEO <option value="Public">RS1_FD_NEW_BOOKING_PUBLIC</option>-->
+			<option value="None">RS1_FD_NEW_BOOKING_NONE</option>
+		</field>
+		
+		</fieldset>
+	</fields>
+</metadata>

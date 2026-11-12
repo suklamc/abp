@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="4" method="upgrade">
+	<name>com_rsappt_pro3</name>
+	<creationDate>June 2020</creationDate>
+	<author>Soft Ventures, Inc.</author>
+	<copyright>Copyright(C) 2008 - 2021 Soft Ventures, Inc. All rights reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@softventures.com</authorEmail>
+	<authorUrl>www.softventures.com</authorUrl>
+	<version>4.0.5.b11</version>
+	<description>
+	
+		<![CDATA[ 
+		<div style="text-align:left">
+			<p>Appointment Booking Pro system for Joomla 4.0+ </p>
+			This version of ABPro is not compatible with versions of Joomla prior to 4.0.
+			<p>		
+			<p><u>Version 4.0.5 (beta 11 Apr 6/22) </u></p>
+			</p>		
+			<br />		
+
+		New in version 4.0.5 ..<br />
+		<ul>
+		<li>Support for the Joomla 4.0</li>
+		</ul>
+		<br />		
+		beta 2
+		<ul>
+		<li>Error on saving booking if user not logged in. Fixed</li>
+		</ul>
+		<br />		
+		beta 3
+		<ul>
+		<li>Blank popup when changing services with durations. Fixed</li>
+		<li>Customer History, prienter Friendly view not working, fixed. </li>
+		<li>PayPal IPN code reworked to use curl as per PayPal's recommendation. This is to stop the false IPN failures that PayPal is logging.</li>
+		<li>Incorrrect balance due if using ABPro 'deposit only' with PayPal. Fixed</li>
+		</ul>
+		beta 4
+		<ul>
+		<li>Book Dates not showing in Calendar view. fixed </li>
+		<li>Saving data leaving Joomla showing the tables as 'checked-out'. Fixed 
+		(thanks to Robert Gastaud)</li>
+		</ul>
+		beta 5
+		<ul>
+		<li>Backend tabs all broke with J4 b7, rewritten</li>
+		</ul>
+		beta 6
+		<ul>
+		<li>Services stopped showing on booking screen with Joomla RC4. Fixed.</li>
+		<li>All admin listing screens' PUB/UNPUB buttons stopped working with Joomla RC4. Fixed</li>
+		</ul>
+		beta 7
+		<ul>
+		<li>SEO Use URL Rewriting not working. Fixed.</li>
+		</ul>
+		beta 8
+		<ul>
+		<li>After Appointment message not sending when trigger status set to anything other than 'completed'. Fixed.</li>
+		</ul>
+		beta 9
+		<ul>
+		<li>Alternate code for the screen dump of Cart order summary page.</li>
+		<li>Categories maintenance screen not showing any categories. Fixed</li>
+		<li>In the Book Dates screen, the option to alter Date Specific Availablity not switching. Fixed</li>
+		</ul>
+		beta 10
+		<ul>
+		<li>When using Book Dates option, dates not showing in the Calendar view. Fixed</li>
+		<li>Problems with Cancel Booking screen. Fixed</li>
+		</ul>
+		beta 11
+		<ul>
+		<li>Changed the Categories controller name to categories_abp to prevent conflict with Joomla.</li>
+		<li>Implemented (but not tested) changes for php8 submitted by Sebastian Richter</li>
+		</ul>
+		<br />		
+		
+		</div>]]>
+		
+	</description>
+    <scriptfile>install.rsappt_pro3.php</scriptfile>
+	
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>rsappt_pro3.php</filename>
+		<filename>CalendarPopup.js</filename>
+		<filename>date.js</filename>
+		<filename>calStyles.css</filename>
+		<filename>icon_cal.gif</filename>
+		<filename>icon_cal_gr.png</filename>
+		<filename>icon_cal_mobile.png</filename>
+		<filename>box.png</filename>
+		<filename>fe_val.php</filename>
+		<filename>fe_val_edit.php</filename>
+		<filename>fe_val_edit_pt2.php</filename>
+		<filename>fe_fetch.php</filename>
+		<filename>fe_overlap.php</filename>
+		<filename>functions2.php</filename>
+		<filename>gad_ajax.php</filename>
+		<filename>gad_ajax2.php</filename>
+		<filename>getSlots.php</filename>
+		<filename>getSlots2.php</filename>
+		<filename>publish_x.png</filename>
+		<filename>script.js</filename>
+		<filename>svcalendar.php</filename>
+		<filename>svcalendarview.php</filename>
+		<filename>svgcal.php</filename>
+		<filename>sv_apptpro.css</filename>
+		<filename>sv_apptpro_fb.css</filename>
+		<filename>tick.png</filename>
+		<filename>no_image.png</filename>
+		<filename>router.php</filename>
+		<filename>search.png</filename>
+		<filename>mysql2json.class.php</filename>
+		<filename>mysqli2json.class.php</filename>
+		<filename>list_remove24.png</filename>
+		<filename>jquery.validate.min.js</filename>
+		<filename>jquery.validate.creditcardtypes.js</filename>
+		<filename>help_udf.png</filename>
+		<filename>help_udf2.png</filename>
+		<filename>sv_tooltip.js</filename>
+		<filename>sv_tooltip.css</filename>
+		<filename>sv_udf_help.php</filename>
+		<filename>arrow_left30.png</filename>
+		<filename>arrow_right30.png</filename>
+		<filename>ddslick.js</filename>
+		<filename>iframeResizer.min.js</filename>
+		<filename>iframeResizer.contentWindow.min.js</filename>
+		<filename>snap.svg-min.js</filename>
+		<filename>prism.js</filename>
+		<filename>add_to_notification_list.php</filename>
+		<filename>jquery.ui.touch-punch.min.js</filename>
+
+		<filename>sv_apptpro.4.0.3.b2.css</filename>
+
+        <folder>controllers</folder>
+        <folder>views</folder>
+        <folder>payment_processors</folder>
+        <folder>models</folder>
+        <folder>ajax</folder>
+		<folder>anet_php_sdk</folder>
+        <folder>inc</folder>
+        <folder>datepicker_locale</folder>
+        <folder>sv_codeblocks</folder>
+        <folder>stripe</folder>
+	</files>
+	
+	<languages>
+		<language tag="en-GB">language/site/com_rsappt_pro3.ini</language>
+	</languages>
+
+	
+	<administration>
+		<menu img="components/com_rsappt_pro3/images/abpro_logo.png">COM_RSAPPT_PRO3</menu>
+		<submenu>
+			<menu link="option=com_rsappt_pro3&amp;controller=cpanel" img="components/com_rsappt_pro3/images/control_16.png" >COM_RSAPPT_PRO3_CONTROL_PANEL</menu>
+			<menu link="option=com_rsappt_pro3&amp;controller=config_detail" img="components/com_rsappt_pro3/images/configure_16.png" >COM_RSAPPT_PRO3_CONFIGURE</menu>
+			<menu link="option=com_rsappt_pro3&amp;controller=requests" img="components/com_rsappt_pro3/images/bookings_16.png" >COM_RSAPPT_PRO3_APPOINTMENTS</menu>
+			<menu link="option=com_rsappt_pro3&amp;controller=bookoffs" img="components/com_rsappt_pro3/images/bookoffs_16.png" >COM_RSAPPT_PRO3_BOOK-OFFS</menu>
+			<menu link="option=com_rsappt_pro3&amp;controller=book_dates" >COM_RSAPPT_PRO3_BOOK_DATES</menu>			
+			<menu link="option=com_rsappt_pro3&amp;controller=categories" img="components/com_rsappt_pro3/images/pad_16.png" >COM_RSAPPT_PRO3_CATEGORIES</menu>
+			<menu link="option=com_rsappt_pro3&amp;controller=coupons">COM_RSAPPT_PRO3_COUPONS</menu>
+			<menu link="option=com_rsappt_pro3&amp;controller=extras">COM_RSAPPT_PRO3_EXTRAS</menu>
+			<menu link="option=com_rsappt_pro3&amp;controller=mail">COM_RSAPPT_PRO3_MAIL</menu>
+			<menu link="option=com_rsappt_pro3&amp;controller=payment_processors">COM_RSAPPT_PRO3_PAYPROC</menu>
+			<menu link="option=com_rsappt_pro3&amp;controller=resources" img="components/com_rsappt_pro3/images/resources_16.png" >COM_RSAPPT_PRO3_RESOURCES</menu>
+			<menu link="option=com_rsappt_pro3&amp;controller=seat_types">COM_RSAPPT_PRO3_SEATS</menu>
+			<menu link="option=com_rsappt_pro3&amp;controller=services" img="components/com_rsappt_pro3/images/pad_16.png" >COM_RSAPPT_PRO3_SERVICES</menu>
+			<menu link="option=com_rsappt_pro3&amp;controller=timeslots" img="components/com_rsappt_pro3/images/timeslots_16.png" >COM_RSAPPT_PRO3_TIME_SLOTS</menu>
+			<menu link="option=com_rsappt_pro3&amp;controller=udfs" img="components/com_rsappt_pro3/images/udf_16.png" >COM_RSAPPT_PRO3_UDFS</menu>
+			<menu link="option=com_rsappt_pro3&amp;controller=user_credit">COM_RSAPPT_PRO3_USER_CREDIT</menu>
+		</submenu>
+	
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>index.html</filename>
+			<filename>rsappt_pro3.php</filename>
+			<filename>backup.php</filename>
+			<filename>restore.php</filename>
+			<filename>sendmail_pro2.php</filename>
+			<filename>functions_pro2.php</filename>
+			<filename>tooltip.png</filename>
+			<filename>abpro_admin.css</filename>
+			<!-- database script -->
+			<filename>install.rsappt_pro3.sql</filename>
+			<filename>uninstall.rsappt_pro3.sql</filename>
+			<!--<filename>update.rsappt_pro3.sql</filename>-->
+
+            <folder>controllers</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+            <folder>models</folder>
+			<folder>help</folder>
+			<folder>helpers</folder>
+			<folder>images</folder>
+	        <folder>payment_processors</folder>
+	        <folder>ajax</folder>
+	        <folder>sql</folder>
+		</files>
+
+	<languages>
+			<language tag="en-GB">language/admin/com_rsappt_pro3.ini</language>
+			<language tag="en-GB">language/admin/com_rsappt_pro3.sys.ini</language>
+		</languages>
+
+	</administration>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">install.rsappt_pro3.sql</file>
+		</sql>
+	</install>
+	<update> 
+		<schemas> 
+			<schemapath type="mysql">sql/updates/mysql</schemapath> 
+		</schemas> 
+	</update>	
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">uninstall.rsappt_pro3.sql</file>
+		</sql>
+	</uninstall>
+
+	<updateservers>
+		<server type="extension" priority="1" name="Appointment Booking Pro Update Site">https://appointmentbookingpro.com/abpro_versions2.xml</server>
+	</updateservers> 
+
+</extension>

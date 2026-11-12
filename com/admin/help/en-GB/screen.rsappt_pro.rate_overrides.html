@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Time Slot Setup</title>
+<link href="../css/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Rate Overrides</h1>
+
+<h3>Description</h3>
+<p>Rate Overrides is an <b>optional</b> feature allowing you to define special rates charged based on what Joomla Group a customer is assigned to. These overrides can be applied to resource(s), service(s), extra(s) or seat type(s).</p>
+<p>Initial rate setup is done in the respective entity's setup screen. For example, the resource rate is set in the resource setup screen. </p>
+<p>Rates set here <i>override</i> those rates so you can do things like, offer a <i>different</i> rate for registered users or users assigned to specific Joomla Groups.</p>
+<p>Before setting up an override rate, you should be aware of ABPro's order of preference in different types of rates.</p>
+<p><u>Order of Precedence</u><br />
+  Service rate has precedence over resource rate. If you define both, the service rate is used.<br />
+  Seat price has precedence over both resource and service rates.<br />
+  <br />
+  The Override rates <strong>do not</strong> compromise this order of precedence.<br />
+For example, if you define an override rate for a Resource but you have a Service rate, the Service rate it used.</p>
+<p><br/>
+  
+</p>
+
+<h2>Toolbar Icons</h2>
+
+
+<p><strong>Publish:</strong> Sets one or more override rates to Published. </p>
+<p> <strong>Unpublish:</strong> Sets one or more override rates to Unpublished.</p>
+<p> <strong></strong><strong>Remove:</strong> Deletes one or more override rates.</p>
+<p><strong>Edit:</strong> Opens the Override Rates Edit screen to allow you to view and modify the override.</p>
+<p><strong>New:</strong> Opens the New Override Rates  screen to allow you to add a new override.</p>
+<p><strong>Help:</strong> Opens this help screen.</p>
+<p>&nbsp;</p>
+<h2>List Area</h2>
+<p><strong>ID:</strong> Unique ID for the override rate.<br />
+<strong>Type:</strong> This will be what type of rate you are overriding and will be one of 'resource', 'service', 'extra' or 'seat'.<br />
+<strong>Resource:</strong> This is the resource that is getting the override rate. As Services are attributes of a resources, this column will show the resource for any service overrides.<br />
+<strong>Service:</strong> This is the service that is getting the override rate.<br />
+<strong>Extra: </strong>This is the extra that is getting the override rate.<br />
+<strong>Seat:</strong>This is the seat type that is getting the override rate.<br />
+<strong>Group:</strong> This shows what Joomla Group the override applies to.<br />
+  <strong>Rate:</strong> This is the rate used in the override.<br />
+  <strong>Published:</strong> Indicates the published state.<br />
+</p>
+<p>Click on the <strong>ID</strong> to open the edit screen.</p>
+<p>&nbsp;</p>
+
+
+<div align="center" style="margin-top: 30px; margin-bottom: 30px;">
+<a href="#" onclick="javascript:window.close();"><span class="small">Close Window</span></a>
+</div>
+
+</body>
+</html>

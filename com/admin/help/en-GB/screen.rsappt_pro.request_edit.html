@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Booking Request Edit</title>
+<link href="../css/help.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Appointment Request Edit</h1>
+
+<h3>Description</h3>
+<p>The heart of the component is the Appointment Request.</p>
+<p>This screen allows you to view and edit the details of a request or Appointment booking. </p>
+<p>&nbsp;</p>
+<h3>Toolbar Icons</h3>
+<p><strong>Cancel:</strong> Abort changes and return to the previous screen.</p>
+<p>
+<strong>Save:</strong> Save changes and return to the previous screen.</p>
+<p><strong>Help:</strong> Opens this help screen.</p>
+<p>&nbsp;</p>
+<h3>Edit Area</h3>
+<p>The edit are is divided into two sections, the top is the request as it came from the user. The lower section is an Admin area where the administrator decides what to do the request.</p>
+<p><strong>Name to End Time:</strong> The top fields are self explanatory. </p>
+<p><strong>Comment:</strong> This is the comment from the user and is not editable.</p>
+<p><strong>User Defined Fields (UDFs):</strong> This area shows the values entered by the user for any UDFs you have defined. On the right shows the type of UDF and the label.</p>
+<p>Below the UDFs is the Admin area.</p>
+<p><strong>Administrator Comment:</strong> Administrator can enter an internal comment. 
+Example: <em>'Phoned to confirmed new end time</em>' </p>
+<p><strong>Payment Status</strong>: Change as required to indicate payment has been received.</p>
+<p><strong>Request Status: </strong>Used and a indicator for the administrator and also by the system if duplicate bookings are not allowed. Bookings with status of Accepted OR Pending will trigger a conflict message if Prevent Duplicate Bookings is set to Yes.</p>
+<p><strong>Current Calendar</strong>: Read-only indicator of which 3rd party calendar you current have ABPro set to use.</p>
+<p><strong>Post to Calendar: </strong></p>
+<blockquote>
+  <blockquote>
+    <p>To have an entry added to a 3rd party calendar the following are required: </p>
+    <ul>
+      <li>A calendar chosen in the config screen </li>
+      <li>The <strong>Request Status</strong> set to 'Accepted' </li>
+      <li>The <strong>Post to Calendar</strong> set to 'Yes'</li>
+    </ul>
+    <p>&nbsp;</p>
+  </blockquote>
+</blockquote>
+<p><strong>Calendar Category</strong>: The 3rd party calendars require a category be specified.</p>
+<p><strong>Calendar Comment:</strong> This comment will appear in the calendar booking details. 
+Examples: who the resource is booked to, what for, etc </p>
+<p><strong>Timestamp:</strong> read only, showing time request was entered.</p>
+<p>&nbsp;</p>
+<p>Note: If you have set Calendar to 'None', the calendar related fields will not appear in this screen.</p>
+<p>&nbsp;</p>
+<div align="center" style="margin-top: 30px; margin-bottom: 30px;">
+<a href="#" onclick="javascript:window.close();"><span class="small">Close Window</span></a>
+</div>
+
+</body>
+</html>
