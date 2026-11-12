@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <extension version="4.0" type="plugin" group="content">
+	<name>plg_content_abpro_content_link</name>
+	<name>ABPro content page link plugin</name>
+	<creationDate>February 2020</creationDate>
+	<author>Soft Ventures, Inc.</author>
+	<copyright>Soft Ventures, Inc. All rights reserved</copyright>
+	<authorEmail>support@softventures.com</authorEmail>
+	<authorUrl>www.softventures.com</authorUrl>
+	<version>3.0 beta 1</version>
+	<description>
+		<![CDATA[ 
+		<div style="text-align:left">
+		<p>Plug-in to create a link to Appointment Booking Pro 4 in a content page.</p>
+		<br />		
+		<p><u>Version 3.0 (beta 1 Feb 11/20) </u></p>
+		<br />
+		<br />Modified to work under Joomla 4.
+		<br />
+		After install, go into the Plugin and set which version of ABPro you are using and set parameters as required. 
+		<br>To use it:
+		<ul>
+			<li>Enable the plugin.</li>
+			<li>Place {abpro_link} in your content page where you want a link to ABPro to be created. See Plugin parameteres for addtional options.</li>
+		</ul>	
+		For detailed instructions: <a href='http://appointmentbookingpro.com/abpro-link-plug-in.html' 
+			target='_blank'>www.appointmentbookingpro.com</a>
+		<br />	
+		Accordion settings, and the order of booking screen sections, are set in the plugin <b>Options</b> tab.
+		<br>
+		Popup is no longer supported due to changes in Joomla 4.
+		<br>
+		<br>
+
+		</div>]]>	
+	</description>
+	
+	<files>
+		<filename plugin="abpro_content_link">abpro_content_link.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_content_abpro_content_link.ini</language>
+		<language tag="en-GB">en-GB.plg_content_abpro_content_link.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="default_text" type="text"	description="PLG_CONTENT_ABPRO_CONTENT_LINK_DEF_TEXT_DESC"	label="PLG_CONTENT_ABPRO_CONTENT_LINK_DEF_TEXT_LABEL" default="Book Now!"/>				
+				<field name="abpro_version" type="list" default="4" label="PLG_CONTENT_ABPRO_CONTENT_LINK_VERSION_LABEL" description="PLG_CONTENT_ABPRO_CONTENT_LINK_VERSION_DESC">
+					<option value="4">4</option>
+				</field>
+				<field name="which_screen" type="list" default="booking_screen_gad" label="PLG_CONTENT_ABPRO_CONTENT_LINK_VIEW_LABEL" description="PLG_CONTENT_ABPRO_CONTENT_LINK_VIEW_DESC">
+					<option value="booking_screen_simple">PLG_CONTENT_ABPRO_CONTENT_LINK_VIEW_SIMPLE</option>
+					<option value="booking_screen_gad">PLG_CONTENT_ABPRO_CONTENT_LINK_VIEW_GAD</option>
+					<option value="bookingscreengadwiz">PLG_CONTENT_ABPRO_CONTENT_LINK_VIEW_WIZARD</option>
+				</field>				
+				<field name="layout" type="list" 
+					label="View" description="Select the view to be used by this menu. (Normal or Accordian)">
+					<option value="0">Normal</option>
+					<option value="1">Accordian</option>
+				</field>
+				<field name="mode" type="list" default="norm" label="PLG_CONTENT_ABPRO_CONTENT_LINK_MODE_LABEL" description="PLG_CONTENT_ABPRO_CONTENT_LINK_MODE_DESC"> 
+					<option value="norm">PLG_CONTENT_ABPRO_CONTENT_LINK_MODE_NORMAL</option>
+					<option value="sing_cat">PLG_CONTENT_ABPRO_CONTENT_LINK_MODE_SING_CAT</option>
+					<option value="sing_res">PLG_CONTENT_ABPRO_CONTENT_LINK_MODE_SING_RES</option>
+					<option value="sing_srv">PLG_CONTENT_ABPRO_CONTENT_LINK_MODE_SING_SRV</option>
+				</field>
+				<field name="sing_id" type="text" description="PLG_CONTENT_ABPRO_CONTENT_LINK_ID_DESC" label="PLG_CONTENT_ABPRO_CONTENT_LINK_ID_LABEL"	/>				
+				<field name="startdate" type="text"	description="PLG_CONTENT_ABPRO_CONTENT_LINK_DATE_DESC" label="PLG_CONTENT_ABPRO_CONTENT_LINK_DATE_LABEL"/>				
+				<field name="starttime" type="text"	description="PLG_CONTENT_ABPRO_CONTENT_LINK_STARTTIME_DESC"	label="PLG_CONTENT_ABPRO_CONTENT_LINK_STARTTIME_LABEL"/>				
+				<field name="endtime" type="text"	description="PLG_CONTENT_ABPRO_CONTENT_LINK_ENDTIME_DESC" label="PLG_CONTENT_ABPRO_CONTENT_LINK_ENDTIME_LABEL"/>				
+				<field name="popup" type="list" default="no" label="PLG_CONTENT_ABPRO_CONTENT_LINK_POPUP_LABEL" description="PLG_CONTENT_ABPRO_CONTENT_LINK_POPUP_DESC"> 
+					<option value="no">PLG_CONTENT_ABPRO_CONTENT_LINK_NO</option>
+				</field>
+				<field name="spacer" type="spacer" class="text" label="Popup no longer supported due to changes in Joomla 4" />		
+				<field name="link_class" type="text" class="text" label="PLG_CONTENT_ABPRO_CONTENT_LINK_CLASS" description="PLG_CONTENT_ABPRO_CONTENT_LINK_CLASS_DESC" />		
+				<field name="link_image" type="text" class="text" label="PLG_CONTENT_ABPRO_CONTENT_LINK_IMAGE" description="PLG_CONTENT_ABPRO_CONTENT_LINK_IMAGE_DESC" />		
+			</fieldset>
+		</fields>
+		<fields name="params">
+			<fieldset name="options">
+				<field name="spacer" type="spacer" class="text" label="Section Ordering - Set the order in which sections appear." />		
+				<field name="accord_1" type="list" default="accord_res"
+					label="Section 1" description="Select the data to display in this accorion section.">
+					<option value="accord_hide">Hide</option>
+					<option value="accord_res">Category/Resource/Service</option>
+					<option value="accord_basic">Name/Phone/Email</option>
+					<option value="accord_udfs">User Defined Fields (UDFs)</option>
+					<option value="accord_extras">Extras</option>
+					<option value="accord_seats">Seats</option>
+					<option value="accord_grid">Timeslot Grid</option>
+					<option value="accord_submit">Submit</option>
+				</field>
+				<field name="accord_2" type="list" default="accord_grid"
+					label="Section 2" description="Select the data to display in this accorion section.">
+					<option value="accord_hide">Hide</option>
+					<option value="accord_res">Category/Resource/Service</option>
+					<option value="accord_basic">Name/Phone/Email</option>
+					<option value="accord_udfs">User Defined Fields (UDFs)</option>
+					<option value="accord_extras">Extras</option>
+					<option value="accord_seats">Seats</option>
+					<option value="accord_grid">Timeslot Grid</option>
+					<option value="accord_submit">Submit</option>
+				</field>
+				<field name="accord_3" type="list" default="accord_basic"
+					label="Section 3" description="Select the data to display in this accorion section.">
+					<option value="accord_hide">Hide</option>
+					<option value="accord_res">Category/Resource/Service</option>
+					<option value="accord_basic">Name/Phone/Email</option>
+					<option value="accord_udfs">User Defined Fields (UDFs)</option>
+					<option value="accord_extras">Extras</option>
+					<option value="accord_seats">Seats</option>
+					<option value="accord_grid">Timeslot Grid</option>
+					<option value="accord_submit">Submit</option>
+				</field>
+				<field name="accord_4" type="list" default="accord_udfs"
+					label="Section 4" description="Select the data to display in this accorion section.">
+					<option value="accord_hide">Hide</option>
+					<option value="accord_res">Category/Resource/Service</option>
+					<option value="accord_basic">Name/Phone/Email</option>
+					<option value="accord_udfs">User Defined Fields (UDFs)</option>
+					<option value="accord_extras">Extras</option>
+					<option value="accord_seats">Seats</option>
+					<option value="accord_grid">Timeslot Grid</option>
+					<option value="accord_submit">Submit</option>
+				</field>
+				<field name="accord_5" type="list" default="accord_extras"
+					label="Section 5" description="Select the data to display in this accorion section.">
+					<option value="accord_hide">Hide</option>
+					<option value="accord_res">Category/Resource/Service</option>
+					<option value="accord_basic">Name/Phone/Email</option>
+					<option value="accord_udfs">User Defined Fields (UDFs)</option>
+					<option value="accord_extras">Extras</option>
+					<option value="accord_seats">Seats</option>
+					<option value="accord_grid">Timeslot Grid</option>
+					<option value="accord_submit">Submit</option>
+				</field>
+				<field name="accord_6" type="list" default="accord_seats"
+					label="Section 6" description="Select the data to display in this accorion section.">
+					<option value="accord_hide">Hide</option>
+					<option value="accord_res">Category/Resource/Service</option>
+					<option value="accord_basic">Name/Phone/Email</option>
+					<option value="accord_udfs">User Defined Fields (UDFs)</option>
+					<option value="accord_extras">Extras</option>
+					<option value="accord_seats">Seats</option>
+					<option value="accord_grid">Timeslot Grid</option>
+					<option value="accord_submit">Submit</option>
+				</field>
+				<field name="accord_7" type="list" default="accord_submit"
+					label="Section 7" description="Select the data to display in this accorion section.">
+					<option value="accord_hide">Hide</option>
+					<option value="accord_res">Category/Resource/Service</option>
+					<option value="accord_basic">Name/Phone/Email</option>
+					<option value="accord_udfs">User Defined Fields (UDFs)</option>
+					<option value="accord_extras">Extras</option>
+					<option value="accord_seats">Seats</option>
+					<option value="accord_grid">Timeslot Grid</option>
+					<option value="accord_submit">Submit</option>
+				</field>
+				<field name="spacer2" type="spacer" class="text" label="DO NOT set the same data in more than on section." />		
+				<field name="spacer1" type="spacer" hr="true" />
+				<field name="spacerw" type="spacer" class="text" label="Wizard Booking screen Accordion Ordering - Set the data to be displayed in each accordion section." />		
+				<field name="accord_1w" type="list" default="accord_basic"
+					label="Section 1" description="Select the data to display in this accorion section.">
+					<option value="accord_hide">Hide</option>
+					<option value="accord_basic">Name/Phone/Email</option>
+					<option value="accord_udfs">User Defined Fields (UDFs)</option>
+					<option value="accord_extras">Extras</option>
+					<option value="accord_seats">Seats</option>
+				</field>
+				<field name="accord_2w" type="list" default="accord_udfs"
+					label="Section 2" description="Select the data to display in this accorion section.">
+					<option value="accord_hide">Hide</option>
+					<option value="accord_basic">Name/Phone/Email</option>
+					<option value="accord_udfs">User Defined Fields (UDFs)</option>
+					<option value="accord_extras">Extras</option>
+					<option value="accord_seats">Seats</option>
+				</field>
+				<field name="accord_3w" type="list" default="accord_extras"
+					label="Section 3" description="Select the data to display in this accorion section.">
+					<option value="accord_hide">Hide</option>
+					<option value="accord_basic">Name/Phone/Email</option>
+					<option value="accord_udfs">User Defined Fields (UDFs)</option>
+					<option value="accord_extras">Extras</option>
+					<option value="accord_seats">Seats</option>
+				</field>
+				<field name="accord_4w" type="list" default="accord_seats"
+					label="Section 4" description="Select the data to display in this accorion section.">
+					<option value="accord_hide">Hide</option>
+					<option value="accord_basic">Name/Phone/Email</option>
+					<option value="accord_udfs">User Defined Fields (UDFs)</option>
+					<option value="accord_extras">Extras</option>
+					<option value="accord_seats">Seats</option>
+				</field>
+				<field name="spacer2w" type="spacer" class="text" label="DO NOT set the same data in more than on section. Submit should always be last. You must have a Cat/Res/Srv, Timeslot Select and a Submit." />		
+			</fieldset>
+		</fields>
+		
+	</config>
+	
+</extension>
